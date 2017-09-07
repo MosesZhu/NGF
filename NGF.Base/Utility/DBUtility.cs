@@ -10,7 +10,7 @@ namespace NGF.Base.Utility
         {
             get
             {
-                return mDBSession ?? (mDBSession = CreateDbSession("system"));
+                return CreateDbSession("system");
             }
             set
             {
@@ -23,7 +23,7 @@ namespace NGF.Base.Utility
         {
             get
             {
-                return mNgfDBSession ?? (mNgfDBSession = CreateDbSession("ngf"));
+                return CreateDbSession("ngf");
             }
             set
             {
@@ -36,7 +36,7 @@ namespace NGF.Base.Utility
         {
             get
             {
-                return mWscDBSession ?? (mWfkDBSession = CreateDbSession("wscConnectionString"));
+                return CreateDbSession("wscConnectionString");
             }
             set
             {
@@ -49,7 +49,7 @@ namespace NGF.Base.Utility
         {
             get
             {
-                return mWfkDBSession ?? (mWfkDBSession = CreateDbSession("WebFramework"));
+                return CreateDbSession("WebFramework");
             }
             set
             {

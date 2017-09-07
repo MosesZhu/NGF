@@ -1124,7 +1124,8 @@
 							html += _news.getNewsItemHtml(news);
 						});
 						$("#newsList").html(html);
-					} else {
+                    } else {
+                        $("#newsList").html("");
 						$("#lblNewsCount").text(newsCount).hide(200);
 					}
 				},

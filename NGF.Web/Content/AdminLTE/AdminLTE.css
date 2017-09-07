@@ -1169,12 +1169,12 @@ a:focus {
   margin-top: -2px;
 }
 @media (max-width: 767px) {
-  .navbar-nav > .user-menu .user-image {
-    float: none;
-    margin-right: 0;
-    margin-top: -8px;
-    line-height: 10px;
-  }
+    .navbar-nav > .user-menu .user-image {
+        float: none;
+        margin-right: 0;
+        margin-top: -4px; /*Modified by Moses Zhu margin-top: -8px;*/
+        line-height: 10px;
+    }
 }
 /* Add fade animation to dropdown menus by appending
  the class .animated-dropdown-menu to the .dropdown-menu ul (or ol)*/

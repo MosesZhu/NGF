@@ -35,7 +35,7 @@
                                 <i class="fa fa-envelope-o"></i>
                                 <span class="label label-success" id="lblNewsCount" style="display: none;"></span>
                             </a>
-                            <ul class="dropdown-menu">
+                            <ul class="dropdown-menu" id="ngf-news-dropdown-menu">
                                 <li>
                                     <ul class="menu" id="newsList">
                                     </ul>
@@ -59,7 +59,7 @@
                                 <img src="img/user.jpg" class="user-image userImage" alt="User Image">
                                 <span class="hidden-xs" id="lblUserName"></span>
                             </a>
-                            <ul class="dropdown-menu" id="mc-user-dropdown-menu">
+                            <ul class="dropdown-menu" id="ngf-user-dropdown-menu">
                                 <li class="user-header">
                                     <img src="img/user.jpg" class="img-circle userImage" alt="User Image">
                                     <p>
