@@ -1,0 +1,1 @@
+﻿<%@ WebService Language="C#" CodeBehind="PageMultiLanguageGlobalService.asmx.cs" class="ITS.WebFramework.PermissionManagement.WebFormUI.MultiLanguage.PageMultiLanguageGlobal.PageMultiLanguageGlobalService" %>

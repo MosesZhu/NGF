@@ -1,0 +1,1 @@
+﻿<%@ WebHandler Language="C#" CodeBehind="GetFunctionPermissionList.ashx.cs" Class="ITS.WebFramework.PermissionManagement.WebFormUI.PermissionModel.PermissionDetail.FunctionPermission.GetFunctionPermissionList" %>

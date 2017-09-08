@@ -1,0 +1,133 @@
+﻿.jumbotron {
+  color: #fff;
+  position: relative;
+  text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 30px rgba(0,0,0,.075);  
+  background: #020031 url(../images/banner/banner.gif); /* Old browsers */
+  background: -moz-linear-gradient(45deg,  #020031 0%, #2164A6 100%) url(../images/banner/banner.gif); /* FF3.6+ */
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#020031), color-stop(100%,#2164A6)) url(../images/banner/banner.gif); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(45deg,  #020031 0%,#2164A6 100%) url(../images/banner/banner.gif); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(45deg,  #020031 0%,#2164A6 100%) url(../images/banner/banner.gif); /* Opera 11.10+ */
+  background: -ms-linear-gradient(45deg,  #020031 0%,#2164A6 100%) url(../images/banner/banner.gif); /* IE10+ */
+  background: linear-gradient(45deg,  #020031 0%,#2164A6 100%) url(../images/banner/banner.gif); /* W3C */
+  background-repeat:no-repeat;  
+  background: -webkit-background-size: cover; /* For WebKit*/
+    -moz-background-size: cover;    /* Mozilla*/
+    -o-background-size: cover;      /* Opera*/
+    background-size: cover;         /* Generic*/    
+  /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#023C56', endColorstr='#04638D',GradientType=1 );  IE6-9 fallback on horizontal gradient */  
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./images/banner/banner.gif',     sizingMethod='scale');
+    -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./images/banner/banner.gif', sizingMethod='scale')
+  }
+
+
+.jumbotron:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  /*background: url(../images/bs-docs-masthead-pattern.png) repeat center center;*/
+  opacity: .4;
+}
+
+.jumbotron .x-panel-body
+{
+    background-color: transparent;
+    position: relative;
+    z-index: 2;
+    margin-top: 0;
+}
+
+
+.jumbotron .title
+{
+    /*background-image: url(../images/logo/logo2.gif);
+    background-position: left 6px;
+    background-repeat: no-repeat;
+    padding-left: 50px;*/
+    /*margin-top: 2px;*/
+    margin-left: 85px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.jumbotron .title a.logo
+{
+    padding: 3px;
+    border: solid 1px transparent;
+}
+.jumbotron .title a.logo:hover
+{
+    border: solid 1px #999;
+}
+.jumbotron .title a.logo img
+{
+    height: 20px;
+    vertical-align: bottom; 
+}
+
+.jumbotron .title a
+{
+    color: #fff;
+    font-weight: bold;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.jumbotron .version
+{
+    position: absolute;
+    right: 10px;
+    top: 2px;    
+    /*margin-top: auto;
+    margin-bottom: auto;*/
+}
+
+.jumbotron .version a
+{
+    color: #fff;
+    font-weight: bold;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.intro
+{
+    font-family: arial,tahoma,helvetica,sans-serif;
+    font-size: 13px;
+    line-height: 1.5em;
+}
+/*
+.icon_aspx
+{
+    background-image: url(../images/filetype/vs_aspx.png) !important;
+}
+.icon_txt
+{
+    background-image: url(../images/filetype/vs_txt.png) !important;
+}
+.icon_htm
+{
+    background-image: url(../images/filetype/vs_htm.png) !important;
+}
+*/
+
+
+.htoolbar
+{
+    background-image: url("../images/logo/logo2.gif");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+#logo
+{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    filter: alpha(opacity=80);
+    -moz-opacity: 0.8;
+    opacity: 0.8;
+    z-index: 100000;
+}

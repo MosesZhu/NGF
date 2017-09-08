@@ -1,0 +1,1 @@
+﻿<%@ WebHandler Language="C#" CodeBehind="GetUserProductPermissionList.ashx.cs" Class="ITS.WebFramework.PermissionManagement.WebFormUI.PermissionModel.UserProductPermissionInquiry.GetUserProductPermissionList" %>

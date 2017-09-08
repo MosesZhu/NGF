@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Deploy>
+  <FileDeployList>
+    <!--Path: 相对项目目录的子目录或者文件，空的话即为项目目录-->
+    <!--FilePattern: 要拷贝的文件类型。如果是*.*表示全部文件-->
+    <!--ExcludeFolder: 要排除的目录-->
+    <!--ExcludeFile: 要排除的文件-->
+    <!--Recurse: 是否包含子目录-->
+    <!--DeployTo: 要拷贝的目录。如果是双反斜杠\\开头的为绝对地址。如果没有双反斜杠，那么拷贝往\\10.85.10.2\bach20的相应子目录-->
+    <File
+      Path=""
+      FilePattern="*.config;*.ashx;*.asmx;*.js;*.gif;*.ico;*.png;*.master;*.css;*.htm;*.aspx;*.txt"
+      ExcludeFolder="bin;obj;logs;Scripts;Styles"
+      ExcludeFile="Web.Release.config;Web.Debug.config;deploy.xml"
+      Recurse="true"
+      DeployTo="%BACH30%\Web\WebFramework\PermissionManagement\WebFormUI"/>
+
+    <File
+      Path="bin"
+      FilePattern="*.dll;"
+      ExcludeFile="ITS.Data.dll;Oracle.DataAccess.dll;OraOps11w.dll"
+      Recurse="true"
+      DeployTo="%BACH30%\Web\WebFramework\PermissionManagement\WebFormUI\Bin"/>
+    
+    <File Path="bin\ITS.WebFramework.PermissionManagement.Entity.dll" DeployTo="%BACH30%\Common\bin" />
+  </FileDeployList>
+</Deploy>

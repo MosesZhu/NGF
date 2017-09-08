@@ -1,0 +1,1 @@
+﻿<%@ WebHandler Language="C#" CodeBehind="GetPageMultiLanguageGlobalList.ashx.cs" Class="ITS.WebFramework.PermissionManagement.WebFormUI.MultiLanguage.PageMultiLanguageGlobal.GetPageMultiLanguageGlobalList" %>

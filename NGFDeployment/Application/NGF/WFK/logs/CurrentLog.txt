@@ -1,0 +1,409 @@
+﻿INFO  2017-09-06 13:52:47,697   495ms DbSession                 - Text:	--ITS.WebFramework.PermissionComponent.Business.PermissionManager.GetProductList()
+SELECT  DISTINCT   [base_product].[id],[base_product].[name],[base_product].[description],[base_product].[sort_code] FROM [base_product] INNER JOIN [base_domain] ON [base_product].[active] = @p1 AND [base_domain].[active] = @p2 AND [base_product].[id] = [base_domain].[product_id] INNER JOIN [base_system] ON [base_system].[active] = @p3 AND [base_domain].[id] = [base_system].[domain_id]  ORDER BY [base_product].[sort_code] ASC	
+Parameters:
+@p1[Int32] = 1
+@p2[Int32] = 1
+@p3[Int32] = 1
+
+SQL:--ITS.WebFramework.PermissionComponent.Business.PermissionManager.GetProductList()
+SELECT  DISTINCT   [base_product].[id],[base_product].[name],[base_product].[description],[base_product].[sort_code] FROM [base_product] INNER JOIN [base_domain] ON [base_product].[active] = 1 AND [base_domain].[active] = 1 AND [base_product].[id] = [base_domain].[product_id] INNER JOIN [base_system] ON [base_system].[active] = 1 AND [base_domain].[id] = [base_system].[domain_id]  ORDER BY [base_product].[sort_code] ASC
+
+INFO  2017-09-06 13:54:08,317   141ms DbSession                 - Text:	--ITS.WebFramework.PermissionComponent.Business.PermissionManager.GetGlobalSetting()
+SELECT   [base_config_global].[key],[base_config_global].[value] FROM [base_config_global]  WHERE [base_config_global].[active] = @p1 AND ([base_config_global].[org_id] is null  OR [base_config_global].[org_id] = @p2)	
+Parameters:
+@p1[Int32] = 1
+@p2[Guid] = 00000000-0000-0000-0000-000000000000
+
+SQL:--ITS.WebFramework.PermissionComponent.Business.PermissionManager.GetGlobalSetting()
+SELECT   [base_config_global].[key],[base_config_global].[value] FROM [base_config_global]  WHERE [base_config_global].[active] = 1 AND ([base_config_global].[org_id] is null  OR [base_config_global].[org_id] = '00000000-0000-0000-0000-000000000000')
+
+INFO  2017-09-06 14:09:14,422 906245ms DbSession                 - Text:	--ITS.WebFramework.PermissionComponent.Business.PermissionManager.GetGlobalSetting()
+SELECT   [base_config_global].[key],[base_config_global].[value] FROM [base_config_global]  WHERE [base_config_global].[active] = @p1 AND ([base_config_global].[org_id] is null  OR [base_config_global].[org_id] = @p2)	
+Parameters:
+@p1[Int32] = 1
+@p2[Guid] = 00000000-0000-0000-0000-000000000000
+
+SQL:--ITS.WebFramework.PermissionComponent.Business.PermissionManager.GetGlobalSetting()
+SELECT   [base_config_global].[key],[base_config_global].[value] FROM [base_config_global]  WHERE [base_config_global].[active] = 1 AND ([base_config_global].[org_id] is null  OR [base_config_global].[org_id] = '00000000-0000-0000-0000-000000000000')
+
+INFO  2017-09-06 14:11:19,829 1031652ms DbSession                 - Text:	--ITS.WebFramework.PermissionComponent.Business.PermissionManager.GetProductList()
+SELECT  DISTINCT   [base_product].[id],[base_product].[name],[base_product].[description],[base_product].[sort_code] FROM [base_product] INNER JOIN [base_domain] ON [base_product].[active] = @p1 AND [base_domain].[active] = @p2 AND [base_product].[id] = [base_domain].[product_id] INNER JOIN [base_system] ON [base_system].[active] = @p3 AND [base_domain].[id] = [base_system].[domain_id]  ORDER BY [base_product].[sort_code] ASC	
+Parameters:
+@p1[Int32] = 1
+@p2[Int32] = 1
+@p3[Int32] = 1
+
+SQL:--ITS.WebFramework.PermissionComponent.Business.PermissionManager.GetProductList()
+SELECT  DISTINCT   [base_product].[id],[base_product].[name],[base_product].[description],[base_product].[sort_code] FROM [base_product] INNER JOIN [base_domain] ON [base_product].[active] = 1 AND [base_domain].[active] = 1 AND [base_product].[id] = [base_domain].[product_id] INNER JOIN [base_system] ON [base_system].[active] = 1 AND [base_domain].[id] = [base_system].[domain_id]  ORDER BY [base_product].[sort_code] ASC
+
+INFO  2017-09-06 14:11:19,867 1031690ms DbSession                 - Text:	--ITS.WebFramework.PermissionComponent.Business.PermissionManager.GetOrgList()
+SELECT  DISTINCT   [base_org].[id],[base_org].[name],[base_org].[site],[base_org].[description],[base_org].[sort_code] FROM [base_org] INNER JOIN [base_system] ON [base_org].[id] = [base_system].[org_id] INNER JOIN [base_domain] ON [base_domain].[id] = [base_system].[domain_id] INNER JOIN [base_product] ON [base_product].[id] = [base_domain].[product_id]  WHERE [base_org].[active] = @p1 AND [base_system].[active] = @p2 AND [base_domain].[active] = @p3 AND [base_product].[active] = @p4 AND [base_product].[id] = @p5 ORDER BY [base_org].[sort_code] ASC	
+Parameters:
+@p1[Int32] = 1
+@p2[Int32] = 1
+@p3[Int32] = 1
+@p4[Int32] = 1
+@p5[Guid] = bb09e49f-dd06-43c5-abbd-934af79669f9
+
+SQL:--ITS.WebFramework.PermissionComponent.Business.PermissionManager.GetOrgList()
+SELECT  DISTINCT   [base_org].[id],[base_org].[name],[base_org].[site],[base_org].[description],[base_org].[sort_code] FROM [base_org] INNER JOIN [base_system] ON [base_org].[id] = [base_system].[org_id] INNER JOIN [base_domain] ON [base_domain].[id] = [base_system].[domain_id] INNER JOIN [base_product] ON [base_product].[id] = [base_domain].[product_id]  WHERE [base_org].[active] = 1 AND [base_system].[active] = 1 AND [base_domain].[active] = 1 AND [base_product].[active] = 1 AND [base_product].[id] = 'bb09e49f-dd06-43c5-abbd-934af79669f9' ORDER BY [base_org].[sort_code] ASC
+
+INFO  2017-09-06 14:11:19,888 1031711ms DbSession                 - Text:	--ITS.WebFramework.PermissionComponent.Business.PermissionManager.GetOrgList()
+SELECT  DISTINCT   [base_org].[id],[base_org].[name],[base_org].[site],[base_org].[description],[base_org].[sort_code] FROM [base_org] INNER JOIN [base_system] ON [base_org].[id] = [base_system].[org_id] INNER JOIN [base_domain] ON [base_domain].[id] = [base_system].[domain_id] INNER JOIN [base_product] ON [base_product].[id] = [base_domain].[product_id]  WHERE [base_org].[active] = @p1 AND [base_system].[active] = @p2 AND [base_domain].[active] = @p3 AND [base_product].[active] = @p4 AND [base_product].[id] = @p5 ORDER BY [base_org].[sort_code] ASC	
+Parameters:
+@p1[Int32] = 1
+@p2[Int32] = 1
+@p3[Int32] = 1
+@p4[Int32] = 1
+@p5[Guid] = 3202985d-ad51-428e-ac7e-9912de03c045
+
+SQL:--ITS.WebFramework.PermissionComponent.Business.PermissionManager.GetOrgList()
+SELECT  DISTINCT   [base_org].[id],[base_org].[name],[base_org].[site],[base_org].[description],[base_org].[sort_code] FROM [base_org] INNER JOIN [base_system] ON [base_org].[id] = [base_system].[org_id] INNER JOIN [base_domain] ON [base_domain].[id] = [base_system].[domain_id] INNER JOIN [base_product] ON [base_product].[id] = [base_domain].[product_id]  WHERE [base_org].[active] = 1 AND [base_system].[active] = 1 AND [base_domain].[active] = 1 AND [base_product].[active] = 1 AND [base_product].[id] = '3202985d-ad51-428e-ac7e-9912de03c045' ORDER BY [base_org].[sort_code] ASC
+
+INFO  2017-09-06 14:11:19,904 1031727ms DbSession                 - Text:	--ITS.WebFramework.PermissionComponent.Business.PermissionManager.GetOrgList()
+SELECT  DISTINCT   [base_org].[id],[base_org].[name],[base_org].[site],[base_org].[description],[base_org].[sort_code] FROM [base_org] INNER JOIN [base_system] ON [base_org].[id] = [base_system].[org_id] INNER JOIN [base_domain] ON [base_domain].[id] = [base_system].[domain_id] INNER JOIN [base_product] ON [base_product].[id] = [base_domain].[product_id]  WHERE [base_org].[active] = @p1 AND [base_system].[active] = @p2 AND [base_domain].[active] = @p3 AND [base_product].[active] = @p4 AND [base_product].[id] = @p5 ORDER BY [base_org].[sort_code] ASC	
+Parameters:
+@p1[Int32] = 1
+@p2[Int32] = 1
+@p3[Int32] = 1
+@p4[Int32] = 1
+@p5[Guid] = 09a606cb-1d13-4d43-8cb2-cd0b6591604c
+
+SQL:--ITS.WebFramework.PermissionComponent.Business.PermissionManager.GetOrgList()
+SELECT  DISTINCT   [base_org].[id],[base_org].[name],[base_org].[site],[base_org].[description],[base_org].[sort_code] FROM [base_org] INNER JOIN [base_system] ON [base_org].[id] = [base_system].[org_id] INNER JOIN [base_domain] ON [base_domain].[id] = [base_system].[domain_id] INNER JOIN [base_product] ON [base_product].[id] = [base_domain].[product_id]  WHERE [base_org].[active] = 1 AND [base_system].[active] = 1 AND [base_domain].[active] = 1 AND [base_product].[active] = 1 AND [base_product].[id] = '09a606cb-1d13-4d43-8cb2-cd0b6591604c' ORDER BY [base_org].[sort_code] ASC
+
+INFO  2017-09-06 14:11:19,921 1031744ms DbSession                 - Text:	--ITS.WebFramework.PermissionComponent.Business.PermissionManager.GetOrgList()
+SELECT  DISTINCT   [base_org].[id],[base_org].[name],[base_org].[site],[base_org].[description],[base_org].[sort_code] FROM [base_org] INNER JOIN [base_system] ON [base_org].[id] = [base_system].[org_id] INNER JOIN [base_domain] ON [base_domain].[id] = [base_system].[domain_id] INNER JOIN [base_product] ON [base_product].[id] = [base_domain].[product_id]  WHERE [base_org].[active] = @p1 AND [base_system].[active] = @p2 AND [base_domain].[active] = @p3 AND [base_product].[active] = @p4 AND [base_product].[id] = @p5 ORDER BY [base_org].[sort_code] ASC	
+Parameters:
+@p1[Int32] = 1
+@p2[Int32] = 1
+@p3[Int32] = 1
+@p4[Int32] = 1
+@p5[Guid] = 3d3c29a5-fefe-464a-b48b-e35ea54d0ef0
+
+SQL:--ITS.WebFramework.PermissionComponent.Business.PermissionManager.GetOrgList()
+SELECT  DISTINCT   [base_org].[id],[base_org].[name],[base_org].[site],[base_org].[description],[base_org].[sort_code] FROM [base_org] INNER JOIN [base_system] ON [base_org].[id] = [base_system].[org_id] INNER JOIN [base_domain] ON [base_domain].[id] = [base_system].[domain_id] INNER JOIN [base_product] ON [base_product].[id] = [base_domain].[product_id]  WHERE [base_org].[active] = 1 AND [base_system].[active] = 1 AND [base_domain].[active] = 1 AND [base_product].[active] = 1 AND [base_product].[id] = '3d3c29a5-fefe-464a-b48b-e35ea54d0ef0' ORDER BY [base_org].[sort_code] ASC
+
+INFO  2017-09-06 14:11:26,147 1037970ms DbSession                 - Text:	--ITS.WebFramework.PermissionComponent.Business.PermissionManager.GetGlobalSetting()
+SELECT   [base_config_global].[key],[base_config_global].[value] FROM [base_config_global]  WHERE [base_config_global].[active] = @p1 AND ([base_config_global].[org_id] is null  OR [base_config_global].[org_id] = @p2)	
+Parameters:
+@p1[Int32] = 1
+@p2[Guid] = 00000000-0000-0000-0000-000000000000
+
+SQL:--ITS.WebFramework.PermissionComponent.Business.PermissionManager.GetGlobalSetting()
+SELECT   [base_config_global].[key],[base_config_global].[value] FROM [base_config_global]  WHERE [base_config_global].[active] = 1 AND ([base_config_global].[org_id] is null  OR [base_config_global].[org_id] = '00000000-0000-0000-0000-000000000000')
+
+INFO  2017-09-06 14:11:26,241 1038064ms DbSession                 - Text:	--ITS.WebFramework.PermissionComponent.Business.PermissionManager.GetUserInfo()
+SELECT   TOP 1 * FROM [view_base_user]  WHERE upper([view_base_user].[user_name]) = @p1 AND [view_base_user].[active] = @p2	
+Parameters:
+@p1[String] = MOSES.ZHU
+@p2[Int32] = 1
+
+SQL:--ITS.WebFramework.PermissionComponent.Business.PermissionManager.GetUserInfo()
+SELECT   TOP 1 * FROM [view_base_user]  WHERE upper([view_base_user].[user_name]) = N'MOSES.ZHU' AND [view_base_user].[active] = 1
+
+INFO  2017-09-06 14:11:26,271 1038094ms DbSession                 - Text:	--ITS.WebFramework.PermissionComponent.Business.PermissionManager.GetUserInfo()
+SELECT   TOP 1 * FROM [view_base_user]  WHERE upper([view_base_user].[user_name]) = @p1 AND [view_base_user].[active] = @p2	
+Parameters:
+@p1[String] = MOSES.ZHU
+@p2[Int32] = 1
+
+SQL:--ITS.WebFramework.PermissionComponent.Business.PermissionManager.GetUserInfo()
+SELECT   TOP 1 * FROM [view_base_user]  WHERE upper([view_base_user].[user_name]) = N'MOSES.ZHU' AND [view_base_user].[active] = 1
+
+INFO  2017-09-06 14:11:26,279 1038102ms DbSession                 - Text:	--ITS.WebFramework.PermissionComponent.Business.PermissionManager.HasProductPermission()
+select dbo.HasProductPermission('65d9158b-1320-4894-92c1-367ddc59e64d','ed9ac3f5-4d01-49d0-8c55-843e7e65110e','3202985d-ad51-428e-ac7e-9912de03c045')	
+
+SQL:--ITS.WebFramework.PermissionComponent.Business.PermissionManager.HasProductPermission()
+select dbo.HasProductPermission('65d9158b-1320-4894-92c1-367ddc59e64d','ed9ac3f5-4d01-49d0-8c55-843e7e65110e','3202985d-ad51-428e-ac7e-9912de03c045')
+
+INFO  2017-09-06 14:11:49,979 1061802ms DbSession                 - Text:	--ITS.WebFramework.PermissionComponent.Business.PermissionManager.GetProductList()
+SELECT  DISTINCT   [base_product].[id],[base_product].[name],[base_product].[description],[base_product].[sort_code] FROM [base_product] INNER JOIN [base_domain] ON [base_product].[active] = @p1 AND [base_domain].[active] = @p2 AND [base_product].[id] = [base_domain].[product_id] INNER JOIN [base_system] ON [base_system].[active] = @p3 AND [base_domain].[id] = [base_system].[domain_id]  ORDER BY [base_product].[sort_code] ASC	
+Parameters:
+@p1[Int32] = 1
+@p2[Int32] = 1
+@p3[Int32] = 1
+
+SQL:--ITS.WebFramework.PermissionComponent.Business.PermissionManager.GetProductList()
+SELECT  DISTINCT   [base_product].[id],[base_product].[name],[base_product].[description],[base_product].[sort_code] FROM [base_product] INNER JOIN [base_domain] ON [base_product].[active] = 1 AND [base_domain].[active] = 1 AND [base_product].[id] = [base_domain].[product_id] INNER JOIN [base_system] ON [base_system].[active] = 1 AND [base_domain].[id] = [base_system].[domain_id]  ORDER BY [base_product].[sort_code] ASC
+
+INFO  2017-09-06 14:11:49,991 1061814ms DbSession                 - Text:	--ITS.WebFramework.PermissionComponent.Business.PermissionManager.GetOrgList()
+SELECT  DISTINCT   [base_org].[id],[base_org].[name],[base_org].[site],[base_org].[description],[base_org].[sort_code] FROM [base_org] INNER JOIN [base_system] ON [base_org].[id] = [base_system].[org_id] INNER JOIN [base_domain] ON [base_domain].[id] = [base_system].[domain_id] INNER JOIN [base_product] ON [base_product].[id] = [base_domain].[product_id]  WHERE [base_org].[active] = @p1 AND [base_system].[active] = @p2 AND [base_domain].[active] = @p3 AND [base_product].[active] = @p4 AND [base_product].[id] = @p5 ORDER BY [base_org].[sort_code] ASC	
+Parameters:
+@p1[Int32] = 1
+@p2[Int32] = 1
+@p3[Int32] = 1
+@p4[Int32] = 1
+@p5[Guid] = bb09e49f-dd06-43c5-abbd-934af79669f9
+
+SQL:--ITS.WebFramework.PermissionComponent.Business.PermissionManager.GetOrgList()
+SELECT  DISTINCT   [base_org].[id],[base_org].[name],[base_org].[site],[base_org].[description],[base_org].[sort_code] FROM [base_org] INNER JOIN [base_system] ON [base_org].[id] = [base_system].[org_id] INNER JOIN [base_domain] ON [base_domain].[id] = [base_system].[domain_id] INNER JOIN [base_product] ON [base_product].[id] = [base_domain].[product_id]  WHERE [base_org].[active] = 1 AND [base_system].[active] = 1 AND [base_domain].[active] = 1 AND [base_product].[active] = 1 AND [base_product].[id] = 'bb09e49f-dd06-43c5-abbd-934af79669f9' ORDER BY [base_org].[sort_code] ASC
+
+INFO  2017-09-06 14:11:50,002 1061825ms DbSession                 - Text:	--ITS.WebFramework.PermissionComponent.Business.PermissionManager.GetOrgList()
+SELECT  DISTINCT   [base_org].[id],[base_org].[name],[base_org].[site],[base_org].[description],[base_org].[sort_code] FROM [base_org] INNER JOIN [base_system] ON [base_org].[id] = [base_system].[org_id] INNER JOIN [base_domain] ON [base_domain].[id] = [base_system].[domain_id] INNER JOIN [base_product] ON [base_product].[id] = [base_domain].[product_id]  WHERE [base_org].[active] = @p1 AND [base_system].[active] = @p2 AND [base_domain].[active] = @p3 AND [base_product].[active] = @p4 AND [base_product].[id] = @p5 ORDER BY [base_org].[sort_code] ASC	
+Parameters:
+@p1[Int32] = 1
+@p2[Int32] = 1
+@p3[Int32] = 1
+@p4[Int32] = 1
+@p5[Guid] = 3202985d-ad51-428e-ac7e-9912de03c045
+
+SQL:--ITS.WebFramework.PermissionComponent.Business.PermissionManager.GetOrgList()
+SELECT  DISTINCT   [base_org].[id],[base_org].[name],[base_org].[site],[base_org].[description],[base_org].[sort_code] FROM [base_org] INNER JOIN [base_system] ON [base_org].[id] = [base_system].[org_id] INNER JOIN [base_domain] ON [base_domain].[id] = [base_system].[domain_id] INNER JOIN [base_product] ON [base_product].[id] = [base_domain].[product_id]  WHERE [base_org].[active] = 1 AND [base_system].[active] = 1 AND [base_domain].[active] = 1 AND [base_product].[active] = 1 AND [base_product].[id] = '3202985d-ad51-428e-ac7e-9912de03c045' ORDER BY [base_org].[sort_code] ASC
+
+INFO  2017-09-06 14:11:50,013 1061836ms DbSession                 - Text:	--ITS.WebFramework.PermissionComponent.Business.PermissionManager.GetOrgList()
+SELECT  DISTINCT   [base_org].[id],[base_org].[name],[base_org].[site],[base_org].[description],[base_org].[sort_code] FROM [base_org] INNER JOIN [base_system] ON [base_org].[id] = [base_system].[org_id] INNER JOIN [base_domain] ON [base_domain].[id] = [base_system].[domain_id] INNER JOIN [base_product] ON [base_product].[id] = [base_domain].[product_id]  WHERE [base_org].[active] = @p1 AND [base_system].[active] = @p2 AND [base_domain].[active] = @p3 AND [base_product].[active] = @p4 AND [base_product].[id] = @p5 ORDER BY [base_org].[sort_code] ASC	
+Parameters:
+@p1[Int32] = 1
+@p2[Int32] = 1
+@p3[Int32] = 1
+@p4[Int32] = 1
+@p5[Guid] = 09a606cb-1d13-4d43-8cb2-cd0b6591604c
+
+SQL:--ITS.WebFramework.PermissionComponent.Business.PermissionManager.GetOrgList()
+SELECT  DISTINCT   [base_org].[id],[base_org].[name],[base_org].[site],[base_org].[description],[base_org].[sort_code] FROM [base_org] INNER JOIN [base_system] ON [base_org].[id] = [base_system].[org_id] INNER JOIN [base_domain] ON [base_domain].[id] = [base_system].[domain_id] INNER JOIN [base_product] ON [base_product].[id] = [base_domain].[product_id]  WHERE [base_org].[active] = 1 AND [base_system].[active] = 1 AND [base_domain].[active] = 1 AND [base_product].[active] = 1 AND [base_product].[id] = '09a606cb-1d13-4d43-8cb2-cd0b6591604c' ORDER BY [base_org].[sort_code] ASC
+
+INFO  2017-09-06 14:11:50,024 1061847ms DbSession                 - Text:	--ITS.WebFramework.PermissionComponent.Business.PermissionManager.GetOrgList()
+SELECT  DISTINCT   [base_org].[id],[base_org].[name],[base_org].[site],[base_org].[description],[base_org].[sort_code] FROM [base_org] INNER JOIN [base_system] ON [base_org].[id] = [base_system].[org_id] INNER JOIN [base_domain] ON [base_domain].[id] = [base_system].[domain_id] INNER JOIN [base_product] ON [base_product].[id] = [base_domain].[product_id]  WHERE [base_org].[active] = @p1 AND [base_system].[active] = @p2 AND [base_domain].[active] = @p3 AND [base_product].[active] = @p4 AND [base_product].[id] = @p5 ORDER BY [base_org].[sort_code] ASC	
+Parameters:
+@p1[Int32] = 1
+@p2[Int32] = 1
+@p3[Int32] = 1
+@p4[Int32] = 1
+@p5[Guid] = 3d3c29a5-fefe-464a-b48b-e35ea54d0ef0
+
+SQL:--ITS.WebFramework.PermissionComponent.Business.PermissionManager.GetOrgList()
+SELECT  DISTINCT   [base_org].[id],[base_org].[name],[base_org].[site],[base_org].[description],[base_org].[sort_code] FROM [base_org] INNER JOIN [base_system] ON [base_org].[id] = [base_system].[org_id] INNER JOIN [base_domain] ON [base_domain].[id] = [base_system].[domain_id] INNER JOIN [base_product] ON [base_product].[id] = [base_domain].[product_id]  WHERE [base_org].[active] = 1 AND [base_system].[active] = 1 AND [base_domain].[active] = 1 AND [base_product].[active] = 1 AND [base_product].[id] = '3d3c29a5-fefe-464a-b48b-e35ea54d0ef0' ORDER BY [base_org].[sort_code] ASC
+
+INFO  2017-09-06 14:11:52,479 1064302ms DbSession                 - Text:	--ITS.WebFramework.PermissionComponent.Business.PermissionManager.GetUserInfo()
+SELECT   TOP 1 * FROM [view_base_user]  WHERE upper([view_base_user].[user_name]) = @p1 AND [view_base_user].[active] = @p2	
+Parameters:
+@p1[String] = MOSES.ZHU
+@p2[Int32] = 1
+
+SQL:--ITS.WebFramework.PermissionComponent.Business.PermissionManager.GetUserInfo()
+SELECT   TOP 1 * FROM [view_base_user]  WHERE upper([view_base_user].[user_name]) = N'MOSES.ZHU' AND [view_base_user].[active] = 1
+
+INFO  2017-09-06 14:11:52,560 1064383ms DbSession                 - Text:	--ITS.WebFramework.PermissionComponent.Business.PermissionManager.GetUserInfo()
+SELECT   TOP 1 * FROM [view_base_user]  WHERE upper([view_base_user].[user_name]) = @p1 AND [view_base_user].[active] = @p2	
+Parameters:
+@p1[String] = MOSES.ZHU
+@p2[Int32] = 1
+
+SQL:--ITS.WebFramework.PermissionComponent.Business.PermissionManager.GetUserInfo()
+SELECT   TOP 1 * FROM [view_base_user]  WHERE upper([view_base_user].[user_name]) = N'MOSES.ZHU' AND [view_base_user].[active] = 1
+
+INFO  2017-09-06 14:11:52,562 1064385ms DbSession                 - Text:	--ITS.WebFramework.PermissionComponent.Business.PermissionManager.HasProductPermission()
+select dbo.HasProductPermission('65d9158b-1320-4894-92c1-367ddc59e64d','ed9ac3f5-4d01-49d0-8c55-843e7e65110e','3202985d-ad51-428e-ac7e-9912de03c045')	
+
+SQL:--ITS.WebFramework.PermissionComponent.Business.PermissionManager.HasProductPermission()
+select dbo.HasProductPermission('65d9158b-1320-4894-92c1-367ddc59e64d','ed9ac3f5-4d01-49d0-8c55-843e7e65110e','3202985d-ad51-428e-ac7e-9912de03c045')
+
+INFO  2017-09-06 14:29:17,064 2108888ms DbSession                 - Text:	--ITS.WebFramework.PermissionComponent.Business.PermissionManager.GetProductList()
+SELECT  DISTINCT   [base_product].[id],[base_product].[name],[base_product].[description],[base_product].[sort_code] FROM [base_product] INNER JOIN [base_domain] ON [base_product].[active] = @p1 AND [base_domain].[active] = @p2 AND [base_product].[id] = [base_domain].[product_id] INNER JOIN [base_system] ON [base_system].[active] = @p3 AND [base_domain].[id] = [base_system].[domain_id]  ORDER BY [base_product].[sort_code] ASC	
+Parameters:
+@p1[Int32] = 1
+@p2[Int32] = 1
+@p3[Int32] = 1
+
+SQL:--ITS.WebFramework.PermissionComponent.Business.PermissionManager.GetProductList()
+SELECT  DISTINCT   [base_product].[id],[base_product].[name],[base_product].[description],[base_product].[sort_code] FROM [base_product] INNER JOIN [base_domain] ON [base_product].[active] = 1 AND [base_domain].[active] = 1 AND [base_product].[id] = [base_domain].[product_id] INNER JOIN [base_system] ON [base_system].[active] = 1 AND [base_domain].[id] = [base_system].[domain_id]  ORDER BY [base_product].[sort_code] ASC
+
+INFO  2017-09-06 14:29:17,077 2108901ms DbSession                 - Text:	--ITS.WebFramework.PermissionComponent.Business.PermissionManager.GetOrgList()
+SELECT  DISTINCT   [base_org].[id],[base_org].[name],[base_org].[site],[base_org].[description],[base_org].[sort_code] FROM [base_org] INNER JOIN [base_system] ON [base_org].[id] = [base_system].[org_id] INNER JOIN [base_domain] ON [base_domain].[id] = [base_system].[domain_id] INNER JOIN [base_product] ON [base_product].[id] = [base_domain].[product_id]  WHERE [base_org].[active] = @p1 AND [base_system].[active] = @p2 AND [base_domain].[active] = @p3 AND [base_product].[active] = @p4 AND [base_product].[id] = @p5 ORDER BY [base_org].[sort_code] ASC	
+Parameters:
+@p1[Int32] = 1
+@p2[Int32] = 1
+@p3[Int32] = 1
+@p4[Int32] = 1
+@p5[Guid] = bb09e49f-dd06-43c5-abbd-934af79669f9
+
+SQL:--ITS.WebFramework.PermissionComponent.Business.PermissionManager.GetOrgList()
+SELECT  DISTINCT   [base_org].[id],[base_org].[name],[base_org].[site],[base_org].[description],[base_org].[sort_code] FROM [base_org] INNER JOIN [base_system] ON [base_org].[id] = [base_system].[org_id] INNER JOIN [base_domain] ON [base_domain].[id] = [base_system].[domain_id] INNER JOIN [base_product] ON [base_product].[id] = [base_domain].[product_id]  WHERE [base_org].[active] = 1 AND [base_system].[active] = 1 AND [base_domain].[active] = 1 AND [base_product].[active] = 1 AND [base_product].[id] = 'bb09e49f-dd06-43c5-abbd-934af79669f9' ORDER BY [base_org].[sort_code] ASC
+
+INFO  2017-09-06 14:29:17,092 2108916ms DbSession                 - Text:	--ITS.WebFramework.PermissionComponent.Business.PermissionManager.GetOrgList()
+SELECT  DISTINCT   [base_org].[id],[base_org].[name],[base_org].[site],[base_org].[description],[base_org].[sort_code] FROM [base_org] INNER JOIN [base_system] ON [base_org].[id] = [base_system].[org_id] INNER JOIN [base_domain] ON [base_domain].[id] = [base_system].[domain_id] INNER JOIN [base_product] ON [base_product].[id] = [base_domain].[product_id]  WHERE [base_org].[active] = @p1 AND [base_system].[active] = @p2 AND [base_domain].[active] = @p3 AND [base_product].[active] = @p4 AND [base_product].[id] = @p5 ORDER BY [base_org].[sort_code] ASC	
+Parameters:
+@p1[Int32] = 1
+@p2[Int32] = 1
+@p3[Int32] = 1
+@p4[Int32] = 1
+@p5[Guid] = 3202985d-ad51-428e-ac7e-9912de03c045
+
+SQL:--ITS.WebFramework.PermissionComponent.Business.PermissionManager.GetOrgList()
+SELECT  DISTINCT   [base_org].[id],[base_org].[name],[base_org].[site],[base_org].[description],[base_org].[sort_code] FROM [base_org] INNER JOIN [base_system] ON [base_org].[id] = [base_system].[org_id] INNER JOIN [base_domain] ON [base_domain].[id] = [base_system].[domain_id] INNER JOIN [base_product] ON [base_product].[id] = [base_domain].[product_id]  WHERE [base_org].[active] = 1 AND [base_system].[active] = 1 AND [base_domain].[active] = 1 AND [base_product].[active] = 1 AND [base_product].[id] = '3202985d-ad51-428e-ac7e-9912de03c045' ORDER BY [base_org].[sort_code] ASC
+
+INFO  2017-09-06 14:29:17,132 2108956ms DbSession                 - Text:	--ITS.WebFramework.PermissionComponent.Business.PermissionManager.GetOrgList()
+SELECT  DISTINCT   [base_org].[id],[base_org].[name],[base_org].[site],[base_org].[description],[base_org].[sort_code] FROM [base_org] INNER JOIN [base_system] ON [base_org].[id] = [base_system].[org_id] INNER JOIN [base_domain] ON [base_domain].[id] = [base_system].[domain_id] INNER JOIN [base_product] ON [base_product].[id] = [base_domain].[product_id]  WHERE [base_org].[active] = @p1 AND [base_system].[active] = @p2 AND [base_domain].[active] = @p3 AND [base_product].[active] = @p4 AND [base_product].[id] = @p5 ORDER BY [base_org].[sort_code] ASC	
+Parameters:
+@p1[Int32] = 1
+@p2[Int32] = 1
+@p3[Int32] = 1
+@p4[Int32] = 1
+@p5[Guid] = 09a606cb-1d13-4d43-8cb2-cd0b6591604c
+
+SQL:--ITS.WebFramework.PermissionComponent.Business.PermissionManager.GetOrgList()
+SELECT  DISTINCT   [base_org].[id],[base_org].[name],[base_org].[site],[base_org].[description],[base_org].[sort_code] FROM [base_org] INNER JOIN [base_system] ON [base_org].[id] = [base_system].[org_id] INNER JOIN [base_domain] ON [base_domain].[id] = [base_system].[domain_id] INNER JOIN [base_product] ON [base_product].[id] = [base_domain].[product_id]  WHERE [base_org].[active] = 1 AND [base_system].[active] = 1 AND [base_domain].[active] = 1 AND [base_product].[active] = 1 AND [base_product].[id] = '09a606cb-1d13-4d43-8cb2-cd0b6591604c' ORDER BY [base_org].[sort_code] ASC
+
+INFO  2017-09-06 14:29:17,145 2108969ms DbSession                 - Text:	--ITS.WebFramework.PermissionComponent.Business.PermissionManager.GetOrgList()
+SELECT  DISTINCT   [base_org].[id],[base_org].[name],[base_org].[site],[base_org].[description],[base_org].[sort_code] FROM [base_org] INNER JOIN [base_system] ON [base_org].[id] = [base_system].[org_id] INNER JOIN [base_domain] ON [base_domain].[id] = [base_system].[domain_id] INNER JOIN [base_product] ON [base_product].[id] = [base_domain].[product_id]  WHERE [base_org].[active] = @p1 AND [base_system].[active] = @p2 AND [base_domain].[active] = @p3 AND [base_product].[active] = @p4 AND [base_product].[id] = @p5 ORDER BY [base_org].[sort_code] ASC	
+Parameters:
+@p1[Int32] = 1
+@p2[Int32] = 1
+@p3[Int32] = 1
+@p4[Int32] = 1
+@p5[Guid] = 3d3c29a5-fefe-464a-b48b-e35ea54d0ef0
+
+SQL:--ITS.WebFramework.PermissionComponent.Business.PermissionManager.GetOrgList()
+SELECT  DISTINCT   [base_org].[id],[base_org].[name],[base_org].[site],[base_org].[description],[base_org].[sort_code] FROM [base_org] INNER JOIN [base_system] ON [base_org].[id] = [base_system].[org_id] INNER JOIN [base_domain] ON [base_domain].[id] = [base_system].[domain_id] INNER JOIN [base_product] ON [base_product].[id] = [base_domain].[product_id]  WHERE [base_org].[active] = 1 AND [base_system].[active] = 1 AND [base_domain].[active] = 1 AND [base_product].[active] = 1 AND [base_product].[id] = '3d3c29a5-fefe-464a-b48b-e35ea54d0ef0' ORDER BY [base_org].[sort_code] ASC
+
+INFO  2017-09-06 14:35:59,001   236ms DbSession                 - Text:	--ITS.WebFramework.PermissionComponent.Business.PermissionManager.GetGlobalSetting()
+SELECT   [base_config_global].[key],[base_config_global].[value] FROM [base_config_global]  WHERE [base_config_global].[active] = @p1 AND ([base_config_global].[org_id] is null  OR [base_config_global].[org_id] = @p2)	
+Parameters:
+@p1[Int32] = 1
+@p2[Guid] = 00000000-0000-0000-0000-000000000000
+
+SQL:--ITS.WebFramework.PermissionComponent.Business.PermissionManager.GetGlobalSetting()
+SELECT   [base_config_global].[key],[base_config_global].[value] FROM [base_config_global]  WHERE [base_config_global].[active] = 1 AND ([base_config_global].[org_id] is null  OR [base_config_global].[org_id] = '00000000-0000-0000-0000-000000000000')
+
+INFO  2017-09-06 14:35:59,347   582ms DbSession                 - Text:	--ITS.WebFramework.PermissionComponent.Business.PermissionManager.GetUserInfo()
+SELECT   TOP 1 * FROM [view_base_user]  WHERE upper([view_base_user].[user_name]) = @p1 AND [view_base_user].[active] = @p2	
+Parameters:
+@p1[String] = MOSES.ZHU
+@p2[Int32] = 1
+
+SQL:--ITS.WebFramework.PermissionComponent.Business.PermissionManager.GetUserInfo()
+SELECT   TOP 1 * FROM [view_base_user]  WHERE upper([view_base_user].[user_name]) = N'MOSES.ZHU' AND [view_base_user].[active] = 1
+
+INFO  2017-09-06 14:35:59,376   611ms DbSession                 - Text:	--ITS.WebFramework.PermissionComponent.Business.PermissionManager.GetUserInfo()
+SELECT   TOP 1 * FROM [view_base_user]  WHERE upper([view_base_user].[user_name]) = @p1 AND [view_base_user].[active] = @p2	
+Parameters:
+@p1[String] = MOSES.ZHU
+@p2[Int32] = 1
+
+SQL:--ITS.WebFramework.PermissionComponent.Business.PermissionManager.GetUserInfo()
+SELECT   TOP 1 * FROM [view_base_user]  WHERE upper([view_base_user].[user_name]) = N'MOSES.ZHU' AND [view_base_user].[active] = 1
+
+INFO  2017-09-06 14:35:59,383   618ms DbSession                 - Text:	--ITS.WebFramework.PermissionComponent.Business.PermissionManager.HasProductPermission()
+select dbo.HasProductPermission('65d9158b-1320-4894-92c1-367ddc59e64d','ed9ac3f5-4d01-49d0-8c55-843e7e65110e','3202985d-ad51-428e-ac7e-9912de03c045')	
+
+SQL:--ITS.WebFramework.PermissionComponent.Business.PermissionManager.HasProductPermission()
+select dbo.HasProductPermission('65d9158b-1320-4894-92c1-367ddc59e64d','ed9ac3f5-4d01-49d0-8c55-843e7e65110e','3202985d-ad51-428e-ac7e-9912de03c045')
+
+INFO  2017-09-06 14:36:04,795  6030ms DbSession                 - Text:	--ITS.WebFramework.PermissionComponent.Business.PermissionManager.GetSessionInfo()
+SELECT   TOP 1 [sso_session].[id] AS [SessionID],[sso_session].[user_id] AS [UserID],[view_base_user].[user_name] AS [UserName],[view_base_user].[department_code] AS [DepartmentCode],[view_base_user].[email],[view_base_user].[employee_id] AS [EmployeID],[view_base_user].[employee_no] AS [EmployeeNo],[view_base_user].[real_name] AS [RealName ],[sso_session].[domain],[sso_session].[client_ip] AS [ClientIP],[sso_session].[org_id] AS [OrgID],[sso_session].[product_id] AS [ProductID],[base_org].[name] AS [OrgName],[base_product].[name] AS [ProductName],[sso_session].[data],[sso_session].[logon_time] AS [LogonTime],[sso_session].[language],[sso_session].[binary_data] AS [BinaryData],[sso_session].[is_internal] FROM [sso_session] INNER JOIN [view_base_user] ON [sso_session].[user_id] = [view_base_user].[user_id] INNER JOIN [base_org] ON [sso_session].[org_id] = [base_org].[id] INNER JOIN [base_product] ON [sso_session].[product_id] = [base_product].[id]  WHERE [sso_session].[id] = @p1 AND [sso_session].[status] = @p2 AND [base_org].[active] = @p3 AND [base_product].[active] = @p4	
+Parameters:
+@p1[Guid] = 9961ac66-64a5-43df-8a2a-2a46db639749
+@p2[String] = Active
+@p3[Int32] = 1
+@p4[Int32] = 1
+
+SQL:--ITS.WebFramework.PermissionComponent.Business.PermissionManager.GetSessionInfo()
+SELECT   TOP 1 [sso_session].[id] AS [SessionID],[sso_session].[user_id] AS [UserID],[view_base_user].[user_name] AS [UserName],[view_base_user].[department_code] AS [DepartmentCode],[view_base_user].[email],[view_base_user].[employee_id] AS [EmployeID],[view_base_user].[employee_no] AS [EmployeeNo],[view_base_user].[real_name] AS [RealName ],[sso_session].[domain],[sso_session].[client_ip] AS [ClientIP],[sso_session].[org_id] AS [OrgID],[sso_session].[product_id] AS [ProductID],[base_org].[name] AS [OrgName],[base_product].[name] AS [ProductName],[sso_session].[data],[sso_session].[logon_time] AS [LogonTime],[sso_session].[language],[sso_session].[binary_data] AS [BinaryData],[sso_session].[is_internal] FROM [sso_session] INNER JOIN [view_base_user] ON [sso_session].[user_id] = [view_base_user].[user_id] INNER JOIN [base_org] ON [sso_session].[org_id] = [base_org].[id] INNER JOIN [base_product] ON [sso_session].[product_id] = [base_product].[id]  WHERE [sso_session].[id] = '9961ac66-64a5-43df-8a2a-2a46db639749' AND [sso_session].[status] = N'Active' AND [base_org].[active] = 1 AND [base_product].[active] = 1
+
+INFO  2017-09-06 14:36:04,800  6035ms DbSession                 - Text:	--ITS.WebFramework.PermissionComponent.Business.PermissionManager.GetSessionInfo()
+SELECT   TOP 1 [sso_session].[id] AS [SessionID],[sso_session].[user_id] AS [UserID],[view_base_user].[user_name] AS [UserName],[view_base_user].[department_code] AS [DepartmentCode],[view_base_user].[email],[view_base_user].[employee_id] AS [EmployeID],[view_base_user].[employee_no] AS [EmployeeNo],[view_base_user].[real_name] AS [RealName ],[sso_session].[domain],[sso_session].[client_ip] AS [ClientIP],[sso_session].[org_id] AS [OrgID],[sso_session].[product_id] AS [ProductID],[base_org].[name] AS [OrgName],[base_product].[name] AS [ProductName],[sso_session].[data],[sso_session].[logon_time] AS [LogonTime],[sso_session].[language],[sso_session].[binary_data] AS [BinaryData],[sso_session].[is_internal] FROM [sso_session] INNER JOIN [view_base_user] ON [sso_session].[user_id] = [view_base_user].[user_id] INNER JOIN [base_org] ON [sso_session].[org_id] = [base_org].[id] INNER JOIN [base_product] ON [sso_session].[product_id] = [base_product].[id]  WHERE [sso_session].[id] = @p1 AND [sso_session].[status] = @p2 AND [base_org].[active] = @p3 AND [base_product].[active] = @p4	
+Parameters:
+@p1[Guid] = 9961ac66-64a5-43df-8a2a-2a46db639749
+@p2[String] = Active
+@p3[Int32] = 1
+@p4[Int32] = 1
+
+SQL:--ITS.WebFramework.PermissionComponent.Business.PermissionManager.GetSessionInfo()
+SELECT   TOP 1 [sso_session].[id] AS [SessionID],[sso_session].[user_id] AS [UserID],[view_base_user].[user_name] AS [UserName],[view_base_user].[department_code] AS [DepartmentCode],[view_base_user].[email],[view_base_user].[employee_id] AS [EmployeID],[view_base_user].[employee_no] AS [EmployeeNo],[view_base_user].[real_name] AS [RealName ],[sso_session].[domain],[sso_session].[client_ip] AS [ClientIP],[sso_session].[org_id] AS [OrgID],[sso_session].[product_id] AS [ProductID],[base_org].[name] AS [OrgName],[base_product].[name] AS [ProductName],[sso_session].[data],[sso_session].[logon_time] AS [LogonTime],[sso_session].[language],[sso_session].[binary_data] AS [BinaryData],[sso_session].[is_internal] FROM [sso_session] INNER JOIN [view_base_user] ON [sso_session].[user_id] = [view_base_user].[user_id] INNER JOIN [base_org] ON [sso_session].[org_id] = [base_org].[id] INNER JOIN [base_product] ON [sso_session].[product_id] = [base_product].[id]  WHERE [sso_session].[id] = '9961ac66-64a5-43df-8a2a-2a46db639749' AND [sso_session].[status] = N'Active' AND [base_org].[active] = 1 AND [base_product].[active] = 1
+
+INFO  2017-09-06 14:36:05,052  6287ms DbSession                 - Text:	--ITS.WebFramework.PermissionComponent.Business.PermissionManager.GetSessionInfo()
+SELECT   TOP 1 [sso_session].[id] AS [SessionID],[sso_session].[user_id] AS [UserID],[view_base_user].[user_name] AS [UserName],[view_base_user].[department_code] AS [DepartmentCode],[view_base_user].[email],[view_base_user].[employee_id] AS [EmployeID],[view_base_user].[employee_no] AS [EmployeeNo],[view_base_user].[real_name] AS [RealName ],[sso_session].[domain],[sso_session].[client_ip] AS [ClientIP],[sso_session].[org_id] AS [OrgID],[sso_session].[product_id] AS [ProductID],[base_org].[name] AS [OrgName],[base_product].[name] AS [ProductName],[sso_session].[data],[sso_session].[logon_time] AS [LogonTime],[sso_session].[language],[sso_session].[binary_data] AS [BinaryData],[sso_session].[is_internal] FROM [sso_session] INNER JOIN [view_base_user] ON [sso_session].[user_id] = [view_base_user].[user_id] INNER JOIN [base_org] ON [sso_session].[org_id] = [base_org].[id] INNER JOIN [base_product] ON [sso_session].[product_id] = [base_product].[id]  WHERE [sso_session].[id] = @p1 AND [sso_session].[status] = @p2 AND [base_org].[active] = @p3 AND [base_product].[active] = @p4	
+Parameters:
+@p1[Guid] = 9961ac66-64a5-43df-8a2a-2a46db639749
+@p2[String] = Active
+@p3[Int32] = 1
+@p4[Int32] = 1
+
+SQL:--ITS.WebFramework.PermissionComponent.Business.PermissionManager.GetSessionInfo()
+SELECT   TOP 1 [sso_session].[id] AS [SessionID],[sso_session].[user_id] AS [UserID],[view_base_user].[user_name] AS [UserName],[view_base_user].[department_code] AS [DepartmentCode],[view_base_user].[email],[view_base_user].[employee_id] AS [EmployeID],[view_base_user].[employee_no] AS [EmployeeNo],[view_base_user].[real_name] AS [RealName ],[sso_session].[domain],[sso_session].[client_ip] AS [ClientIP],[sso_session].[org_id] AS [OrgID],[sso_session].[product_id] AS [ProductID],[base_org].[name] AS [OrgName],[base_product].[name] AS [ProductName],[sso_session].[data],[sso_session].[logon_time] AS [LogonTime],[sso_session].[language],[sso_session].[binary_data] AS [BinaryData],[sso_session].[is_internal] FROM [sso_session] INNER JOIN [view_base_user] ON [sso_session].[user_id] = [view_base_user].[user_id] INNER JOIN [base_org] ON [sso_session].[org_id] = [base_org].[id] INNER JOIN [base_product] ON [sso_session].[product_id] = [base_product].[id]  WHERE [sso_session].[id] = '9961ac66-64a5-43df-8a2a-2a46db639749' AND [sso_session].[status] = N'Active' AND [base_org].[active] = 1 AND [base_product].[active] = 1
+
+INFO  2017-09-06 14:36:05,061  6296ms DbSession                 - Text:	--ITS.WebFramework.PermissionComponent.Business.PermissionManager.GetSessionInfo()
+SELECT   TOP 1 [sso_session].[id] AS [SessionID],[sso_session].[user_id] AS [UserID],[view_base_user].[user_name] AS [UserName],[view_base_user].[department_code] AS [DepartmentCode],[view_base_user].[email],[view_base_user].[employee_id] AS [EmployeID],[view_base_user].[employee_no] AS [EmployeeNo],[view_base_user].[real_name] AS [RealName ],[sso_session].[domain],[sso_session].[client_ip] AS [ClientIP],[sso_session].[org_id] AS [OrgID],[sso_session].[product_id] AS [ProductID],[base_org].[name] AS [OrgName],[base_product].[name] AS [ProductName],[sso_session].[data],[sso_session].[logon_time] AS [LogonTime],[sso_session].[language],[sso_session].[binary_data] AS [BinaryData],[sso_session].[is_internal] FROM [sso_session] INNER JOIN [view_base_user] ON [sso_session].[user_id] = [view_base_user].[user_id] INNER JOIN [base_org] ON [sso_session].[org_id] = [base_org].[id] INNER JOIN [base_product] ON [sso_session].[product_id] = [base_product].[id]  WHERE [sso_session].[id] = @p1 AND [sso_session].[status] = @p2 AND [base_org].[active] = @p3 AND [base_product].[active] = @p4	
+Parameters:
+@p1[Guid] = 9961ac66-64a5-43df-8a2a-2a46db639749
+@p2[String] = Active
+@p3[Int32] = 1
+@p4[Int32] = 1
+
+SQL:--ITS.WebFramework.PermissionComponent.Business.PermissionManager.GetSessionInfo()
+SELECT   TOP 1 [sso_session].[id] AS [SessionID],[sso_session].[user_id] AS [UserID],[view_base_user].[user_name] AS [UserName],[view_base_user].[department_code] AS [DepartmentCode],[view_base_user].[email],[view_base_user].[employee_id] AS [EmployeID],[view_base_user].[employee_no] AS [EmployeeNo],[view_base_user].[real_name] AS [RealName ],[sso_session].[domain],[sso_session].[client_ip] AS [ClientIP],[sso_session].[org_id] AS [OrgID],[sso_session].[product_id] AS [ProductID],[base_org].[name] AS [OrgName],[base_product].[name] AS [ProductName],[sso_session].[data],[sso_session].[logon_time] AS [LogonTime],[sso_session].[language],[sso_session].[binary_data] AS [BinaryData],[sso_session].[is_internal] FROM [sso_session] INNER JOIN [view_base_user] ON [sso_session].[user_id] = [view_base_user].[user_id] INNER JOIN [base_org] ON [sso_session].[org_id] = [base_org].[id] INNER JOIN [base_product] ON [sso_session].[product_id] = [base_product].[id]  WHERE [sso_session].[id] = '9961ac66-64a5-43df-8a2a-2a46db639749' AND [sso_session].[status] = N'Active' AND [base_org].[active] = 1 AND [base_product].[active] = 1
+
+INFO  2017-09-06 14:36:05,183  6418ms DbSession                 - StoredProcedure:	usp_GetUserProductPermission	
+Parameters:
+@user_id[Guid] = 65d9158b-1320-4894-92c1-367ddc59e64d
+@org_id[Guid] = ed9ac3f5-4d01-49d0-8c55-843e7e65110e
+@product_id[Guid] = 3202985d-ad51-428e-ac7e-9912de03c045
+
+SQL:usp_GetUserProductPermission
+
+INFO  2017-09-06 14:36:05,595  6830ms DbSession                 - Text:	--ITS.WebFramework.PermissionComponent.Business.PermissionManager.HasProductImpersonatePermission()
+SELECT   [base_product].[impersonate_admin_role_id] FROM [base_product]  WHERE [base_product].[active] = @p1 AND [base_product].[id] = @p2	
+Parameters:
+@p1[Int32] = 1
+@p2[Guid] = 3202985d-ad51-428e-ac7e-9912de03c045
+
+SQL:--ITS.WebFramework.PermissionComponent.Business.PermissionManager.HasProductImpersonatePermission()
+SELECT   [base_product].[impersonate_admin_role_id] FROM [base_product]  WHERE [base_product].[active] = 1 AND [base_product].[id] = '3202985d-ad51-428e-ac7e-9912de03c045'
+
+INFO  2017-09-06 14:36:05,895  7130ms DbSession                 - Text:	--ITS.WebFramework.PermissionComponent.Business.PermissionManager.GetRoleAndSubRole()
+WITH    subqry ( Id, name, parent_role_id )
+                          AS ( SELECT   id ,
+                                        name ,
+                                        parent_role_id
+                               FROM     base_role
+                               WHERE    id = @p1
+                               UNION ALL
+                               SELECT   base_role.id ,
+                                        base_role.name ,
+                                        base_role.parent_role_id
+                               FROM     base_role ,
+                                        subqry
+                               WHERE    base_role.parent_role_id = subqry.id
+                             )
+                    SELECT  *
+                    FROM    subqry	
+Parameters:
+@p1[Guid] = 9f2c0356-8b6d-45b2-af2e-2fe116f5f502
+
+SQL:--ITS.WebFramework.PermissionComponent.Business.PermissionManager.GetRoleAndSubRole()
+WITH    subqry ( Id, name, parent_role_id )
+                          AS ( SELECT   id ,
+                                        name ,
+                                        parent_role_id
+                               FROM     base_role
+                               WHERE    id = '9f2c0356-8b6d-45b2-af2e-2fe116f5f502'
+                               UNION ALL
+                               SELECT   base_role.id ,
+                                        base_role.name ,
+                                        base_role.parent_role_id
+                               FROM     base_role ,
+                                        subqry
+                               WHERE    base_role.parent_role_id = subqry.id
+                             )
+                    SELECT  *
+                    FROM    subqry
+
+INFO  2017-09-06 14:36:06,129  7364ms DbSession                 - Text:	--ITS.WebFramework.PermissionComponent.Business.PermissionManager.HasProductImpersonatePermission()
+SELECT  DISTINCT   [base_role_user].[user_id] FROM [base_role_user],[view_base_user]   WHERE [base_role_user].[active] = @p1 AND [base_role_user].[role_id] IN (@p2) AND [base_role_user].[user_id] = [view_base_user].[user_id]	
+Parameters:
+@p1[Int32] = 1
+@p2[Guid] = 9f2c0356-8b6d-45b2-af2e-2fe116f5f502
+
+SQL:--ITS.WebFramework.PermissionComponent.Business.PermissionManager.HasProductImpersonatePermission()
+SELECT  DISTINCT   [base_role_user].[user_id] FROM [base_role_user],[view_base_user]   WHERE [base_role_user].[active] = 1 AND [base_role_user].[role_id] IN ('9f2c0356-8b6d-45b2-af2e-2fe116f5f502') AND [base_role_user].[user_id] = [view_base_user].[user_id]
+
+INFO  2017-09-06 14:36:06,137  7372ms DbSession                 - Text:	--ITS.WebFramework.PermissionComponent.Business.PermissionManager.HasProductImpersonatePermission()
+SELECT  DISTINCT   [base_role_department].[department_id] FROM [base_role_department]  WHERE [base_role_department].[active] = @p1 AND [base_role_department].[role_id] IN (@p2)	
+Parameters:
+@p1[Int32] = 1
+@p2[Guid] = 9f2c0356-8b6d-45b2-af2e-2fe116f5f502
+
+SQL:--ITS.WebFramework.PermissionComponent.Business.PermissionManager.HasProductImpersonatePermission()
+SELECT  DISTINCT   [base_role_department].[department_id] FROM [base_role_department]  WHERE [base_role_department].[active] = 1 AND [base_role_department].[role_id] IN ('9f2c0356-8b6d-45b2-af2e-2fe116f5f502')
+

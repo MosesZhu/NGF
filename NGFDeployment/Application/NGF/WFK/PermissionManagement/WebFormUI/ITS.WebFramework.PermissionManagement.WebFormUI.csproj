@@ -1,0 +1,1844 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B61BB784-47BE-4236-8A43-2C02B3287DB9}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ITS.WebFramework.PermissionManagement.WebFormUI</RootNamespace>
+    <AssemblyName>ITS.WebFramework.PermissionManagement.WebFormUI</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\..\Lib\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\..\Lib\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="ITS.Common.AssemblyInfoExtestion">
+      <HintPath>..\..\Lib\ITS.Common.AssemblyInfoExtestion.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Qisda.Common">
+      <HintPath>..\..\Lib\Qisda.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="SanitizerProviders">
+      <HintPath>$(BACH30)\Client\WebForm\common_bin\SanitizerProviders.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CommonPage\ExportToXml.aspx" />
+    <Content Include="CommonPage\FileUpload.aspx" />
+    <Content Include="CommonPage\FileUpload.js" />
+    <Content Include="Config\GlobalResource\ConfigGlobalResourceImport.aspx" />
+    <Content Include="Config\GlobalResource\ConfigGlobalResourceImport.js" />
+    <Content Include="Config\GlobalResource\ConfigGlobalResourceInquiry.aspx" />
+    <Content Include="Config\GlobalResource\ConfigGlobalResourceInquiry.js" />
+    <Content Include="Config\GlobalResource\ConfigGlobalResourceMaintain.aspx" />
+    <Content Include="Config\GlobalResource\ConfigGlobalResourceMaintain.js" />
+    <Content Include="Config\GlobalResource\ConfigGlobalResourceService.asmx" />
+    <Content Include="Config\GlobalSetting\ConfigGlobalImport.aspx" />
+    <Content Include="Config\GlobalSetting\ConfigGlobalImport.js" />
+    <Content Include="Config\GlobalSetting\ConfigGlobalInquiry.aspx" />
+    <Content Include="Config\GlobalSetting\ConfigGlobalInquiry.js" />
+    <Content Include="Config\GlobalSetting\ConfigGlobalMaintain.aspx" />
+    <Content Include="Config\GlobalSetting\ConfigGlobalMaintain.js" />
+    <Content Include="Config\GlobalSetting\ConfigGlobalService.asmx" />
+    <Content Include="Config\JobSetting\ConfigJobImport.aspx" />
+    <Content Include="Config\JobSetting\ConfigJobImport.js" />
+    <Content Include="Config\SystemSetting\ConfigSystemImport.aspx" />
+    <Content Include="Config\SystemSetting\ConfigSystemImport.js" />
+    <Content Include="Config\SystemSetting\ConfigSystemInquiry.aspx" />
+    <Content Include="Config\SystemSetting\ConfigSystemInquiry.js" />
+    <Content Include="Config\SystemSetting\ConfigSystemMaintain.aspx" />
+    <Content Include="Config\SystemSetting\ConfigSystemMaintain.js" />
+    <Content Include="Config\SystemSetting\ConfigSystemService.asmx" />
+    <Content Include="MultiLanguage\MessageCategory\MessageCategoryInquiry.aspx" />
+    <Content Include="MultiLanguage\MessageCategory\MessageCategoryInquiry.js" />
+    <Content Include="MultiLanguage\MessageCategory\MessageCategoryMaintain.aspx" />
+    <Content Include="MultiLanguage\MessageCategory\MessageCategoryMaintain.js" />
+    <Content Include="MultiLanguage\MessageCategory\MessageCategoryService.asmx" />
+    <Content Include="MultiLanguage\MessageContent\MessageContentInquiry.aspx" />
+    <Content Include="MultiLanguage\MessageContent\MessageContentInquiry.js" />
+    <Content Include="MultiLanguage\MessageContent\MessageContentMaintain.aspx" />
+    <Content Include="MultiLanguage\MessageContent\MessageContentMaintain.js" />
+    <Content Include="MultiLanguage\MessageContent\MessageContentService.asmx" />
+    <Content Include="MultiLanguage\MessageType\MessageTypeInquiry.aspx" />
+    <Content Include="MultiLanguage\MessageType\MessageTypeInquiry.js" />
+    <Content Include="MultiLanguage\MessageType\MessageTypeMaintain.aspx" />
+    <Content Include="MultiLanguage\MessageType\MessageTypeMaintain.js" />
+    <Content Include="MultiLanguage\MessageType\MessageTypeService.asmx" />
+    <Content Include="Config\JobSetting\ConfigJobInquiry.aspx" />
+    <Content Include="Config\JobSetting\ConfigJobInquiry.js" />
+    <Content Include="Config\JobSetting\ConfigJobMaintain.aspx" />
+    <Content Include="Config\JobSetting\ConfigJobMaintain.js" />
+    <Content Include="Config\JobSetting\ConfigJobService.asmx" />
+    <Content Include="deploy.xml" />
+    <Content Include="MultiLanguage\PageMultiLanguageGlobal\PageMultiLanguageGlobalExport.aspx" />
+    <Content Include="MultiLanguage\PageMultiLanguageGlobal\PageMultiLanguageGlobalInquiry.aspx" />
+    <Content Include="MultiLanguage\PageMultiLanguageGlobal\PageMultiLanguageGlobalInquiry.js" />
+    <Content Include="MultiLanguage\PageMultiLanguageGlobal\PageMultiLanguageGlobalMaintain.aspx" />
+    <Content Include="MultiLanguage\PageMultiLanguageGlobal\PageMultiLanguageGlobalMaintain.js" />
+    <Content Include="MultiLanguage\PageMultiLanguageGlobal\PageMultiLanguageGlobalService.asmx" />
+    <Content Include="MultiLanguage\PageMultiLanguage\PageMultiLanguageExport.aspx" />
+    <Content Include="MultiLanguage\PageMultiLanguage\PageMultiLanguageInquiry.aspx" />
+    <Content Include="MultiLanguage\PageMultiLanguage\PageMultiLanguageInquiry.js" />
+    <Content Include="MultiLanguage\PageMultiLanguage\PageMultiLanguageMaintain.aspx" />
+    <Content Include="MultiLanguage\PageMultiLanguage\PageMultiLanguageMaintain.js" />
+    <Content Include="MultiLanguage\PageMultiLanguage\PageMultiLanguageService.asmx" />
+    <Content Include="OrgUser\Department\DepartmentFrame.aspx" />
+    <Content Include="OrgUser\Department\DepartmentFrame.js" />
+    <Content Include="OrgUser\Department\DepartmentInformation.aspx" />
+    <Content Include="OrgUser\Department\DepartmentInformation.js" />
+    <Content Include="OrgUser\Department\DepartmentInquiry.js" />
+    <Content Include="OrgUser\Department\DepartmentRole\DepartmentRoleList.aspx" />
+    <Content Include="OrgUser\Department\DepartmentRole\DepartmentRoleList.js" />
+    <Content Include="OrgUser\Department\DepartmentService.asmx" />
+    <Content Include="OrgUser\Department\DepartmentTree.js" />
+    <Content Include="OrgUser\Department\DepartmentUser.js" />
+    <Content Include="OrgUser\Department\SelectDepartment.aspx" />
+    <Content Include="OrgUser\Department\SelectDepartment.js" />
+    <Content Include="OrgUser\Department\SubDepartment.aspx" />
+    <Content Include="OrgUser\Department\DepartmentInquiry.aspx" />
+    <Content Include="OrgUser\Department\DepartmentUser.aspx" />
+    <Content Include="OrgUser\Department\DepartmentTree.aspx" />
+    <Content Include="OrgUser\Department\SubDepartment.js" />
+    <Content Include="OrgUser\Department\SelectScope.aspx" />
+    <Content Include="OrgUser\Department\SelectScope.js" />
+    <Content Include="OrgUser\Org\OrgImport.aspx" />
+    <Content Include="OrgUser\Org\OrgImport.js" />
+    <Content Include="OrgUser\Org\OrgInquiry.aspx" />
+    <Content Include="OrgUser\Org\OrgInquiry.js" />
+    <Content Include="OrgUser\Org\OrgMaintain.aspx" />
+    <Content Include="OrgUser\Org\OrgMaintain.js" />
+    <Content Include="OrgUser\Org\OrgService.asmx" />
+    <Content Include="OrgUser\User\SelectUser.js" />
+    <Content Include="OrgUser\User\UserFrame.js" />
+    <Content Include="OrgUser\User\UserInformation.aspx" />
+    <Content Include="OrgUser\User\UserFrame.aspx" />
+    <Content Include="OrgUser\User\UserInformation.js" />
+    <Content Include="OrgUser\User\UserInquiry.aspx" />
+    <Content Include="OrgUser\User\UserInquiry.js" />
+    <Content Include="OrgUser\User\UserMaintain.aspx" />
+    <Content Include="OrgUser\User\UserMaintain.js" />
+    <Content Include="OrgUser\User\UserService.asmx" />
+    <Content Include="MultiLanguage\MultiLanguage\MultiLanguageInquiry.aspx" />
+    <Content Include="MultiLanguage\MultiLanguage\MultiLanguageInquiry.js" />
+    <Content Include="MultiLanguage\MultiLanguage\MultiLanguageMaintain.js" />
+    <Content Include="MultiLanguage\MultiLanguage\MultiLanguageMaintain.aspx" />
+    <Content Include="MultiLanguage\MultiLanguage\MultiLanguageService.asmx" />
+    <Content Include="Other\RunJob\RunJob.aspx" />
+    <Content Include="Other\RunJob\RunJob.js" />
+    <Content Include="PermissionModel\PermissionDetail\FunctionPermission\FunctionPermission.aspx" />
+    <Content Include="PermissionModel\PermissionDetail\FunctionPermission\FunctionPermission.js" />
+    <Content Include="PermissionModel\PermissionDetail\SensitiveColumnPermission\SensitiveColumnPermissionList.aspx" />
+    <Content Include="PermissionModel\PermissionDetail\SensitiveColumnPermission\SensitiveColumnPermissionList.js" />
+    <Content Include="PermissionModel\PermissionDetail\SensitiveColumnPermission\SensitiveColumnPermissionMaintain.aspx" />
+    <Content Include="PermissionModel\PermissionDetail\SensitiveColumnPermission\SensitiveColumnPermissionMaintain.js" />
+    <Content Include="OrgUser\User\UserRole\UserRoleList.aspx" />
+    <Content Include="OrgUser\User\UserRole\UserRoleList.js" />
+    <Content Include="PermissionModel\PermissionMode\PermissionModeInquiry.js" />
+    <Content Include="PermissionModel\PermissionMode\PermissionModeMaintain.js" />
+    <Content Include="PermissionModel\PermissionMode\PermissionModeService.asmx" />
+    <Content Include="PermissionModel\Permission\PermissionControl.js" />
+    <Content Include="PermissionModel\Permission\PermissionInquiry.aspx" />
+    <Content Include="PermissionModel\Permission\PermissionInquiry.js" />
+    <Content Include="PermissionModel\Permission\PermissionMaintain.aspx" />
+    <Content Include="PermissionModel\PermissionMode\PermissionModeInquiry.aspx" />
+    <Content Include="PermissionModel\PermissionMode\PermissionModeMaintain.aspx" />
+    <Content Include="PermissionModel\Permission\PermissionMaintain.js" />
+    <Content Include="PermissionModel\Permission\PermissionService.asmx" />
+    <Content Include="PermissionModel\Permission\ViewBaseResourceService.asmx" />
+    <Content Include="PermissionModel\Permission\ViewBaseSubjectService.asmx" />
+    <Content Include="PermissionModel\SubjectPermission\SubjectPermissionFrame.aspx" />
+    <Content Include="PermissionModel\SubjectPermission\SubjectPermissionFrame.js" />
+    <Content Include="PermissionModel\UserProductPermissionInquiry\UserProductPermissionInquiry.aspx" />
+    <Content Include="PermissionModel\UserProductPermissionInquiry\UserProductPermissionInquiry.js" />
+    <Content Include="Portal\FrameworkLog\FrameworkLogInformation.aspx" />
+    <Content Include="Portal\FrameworkLog\FrameworkLogInformation.js" />
+    <Content Include="Portal\FrameworkLog\FrameworkLogInquiry.aspx" />
+    <Content Include="Portal\FrameworkLog\FrameworkLogInquiry.js" />
+    <Content Include="Portal\FrameworkLog\FrameworkLogService.asmx" />
+    <Content Include="Portal\PortalHomePage\PortalHomePage.aspx" />
+    <Content Include="Portal\PortalHomePage\PortalHomePage.js" />
+    <Content Include="Portal\PortalHomePage\PortalHomePageService.asmx" />
+    <Content Include="Portal\PortalHomePage\PortalNewsDetail.aspx" />
+    <Content Include="Portal\PortalHomePage\PortalNewsDetail.js" />
+    <Content Include="Portal\PortalHomePage\Recycle.png" />
+    <Content Include="Portal\PortalLink\PortalLinkInquiry.aspx" />
+    <Content Include="Portal\PortalLink\PortalLinkInquiry.js" />
+    <Content Include="Portal\PortalLink\PortalLinkMaintain.aspx" />
+    <Content Include="Portal\PortalLink\PortalLinkMaintain.js" />
+    <Content Include="Portal\PortalLink\PortalLinkService.asmx" />
+    <Content Include="Portal\PortalNews\PortalNewsContent.aspx" />
+    <Content Include="Portal\PortalNews\PortalNewsContent.js" />
+    <Content Include="Portal\PortalNews\PortalNewsInquiry.aspx" />
+    <Content Include="Portal\PortalNews\PortalNewsInquiry.js" />
+    <Content Include="Portal\PortalNews\PortalNewsMaintain.aspx" />
+    <Content Include="Portal\PortalNews\PortalNewsMaintain.js" />
+    <Content Include="Portal\PortalNews\PortalNewsService.asmx" />
+    <Content Include="Role\RoleUser\RoleUserMaintain.js" />
+    <Content Include="Role\RoleUser\RoleUserMaintain.aspx" />
+    <Content Include="Role\Role\RoleImport.aspx" />
+    <Content Include="Role\Role\RoleImport.js" />
+    <Content Include="Role\Role\SelectRole.aspx" />
+    <Content Include="OrgUser\User\SelectUser.aspx" />
+    <Content Include="Role\RoleDepartment\RoleDepartmentList.aspx" />
+    <Content Include="Role\RoleDepartment\RoleDepartmentList.js" />
+    <Content Include="Role\RoleDepartment\RoleDepartmentNew.aspx" />
+    <Content Include="Role\RoleDepartment\RoleDepartmentNew.js" />
+    <Content Include="Role\RoleDepartment\RoleDepartmentService.asmx" />
+    <Content Include="Role\RoleUser\RoleUserList.js" />
+    <Content Include="Role\RoleUser\RoleUserNew.js" />
+    <Content Include="Role\RoleUser\RoleUserService.asmx" />
+    <Content Include="Role\Role\RoleFrame.aspx" />
+    <Content Include="Role\Role\RoleFrame.js" />
+    <Content Include="Role\Role\RoleInquiry.aspx" />
+    <Content Include="Role\Role\RoleInquiry.js" />
+    <Content Include="Role\Role\RoleMaintain.aspx" />
+    <Content Include="Role\Role\RoleMaintain.js" />
+    <Content Include="Role\Role\RoleService.asmx" />
+    <Content Include="Role\RoleUser\RoleUserList.aspx" />
+    <Content Include="Role\RoleUser\RoleUserNew.aspx" />
+    <Content Include="Role\Role\RoleInformation.aspx" />
+    <Content Include="Role\Role\RoleInformation.js" />
+    <Content Include="Role\Role\SelectRole.js" />
+    <Content Include="SensitiveData\DataSource\DataSourceInquiry.aspx" />
+    <Content Include="SensitiveData\DataSource\DataSourceInquiry.js" />
+    <Content Include="SensitiveData\DataSource\DataSourceMaintain.aspx" />
+    <Content Include="SensitiveData\DataSource\DataSourceMaintain.js" />
+    <Content Include="SensitiveData\DataSource\DataSourceService.asmx" />
+    <Content Include="SensitiveData\DataTableColumn\DataTableColumnMaintain.aspx" />
+    <Content Include="SensitiveData\DataTableColumn\DataTableColumnMaintain.js" />
+    <Content Include="SensitiveData\DataTableColumn\DataTableColumnService.asmx" />
+    <Content Include="SensitiveData\DataTable\DataTableInquiry.aspx" />
+    <Content Include="SensitiveData\DataTable\DataTableInquiry.js" />
+    <Content Include="SensitiveData\DataTable\DataTableMaintain.aspx" />
+    <Content Include="SensitiveData\DataTable\DataTableMaintain.js" />
+    <Content Include="SensitiveData\DataTable\DataTableService.asmx" />
+    <Content Include="SSO\SSOPortal\SSOPortalInquiry.aspx" />
+    <Content Include="SSO\SSOPortal\SSOPortalInquiry.js" />
+    <Content Include="SSO\SSOPortal\SSOPortalMaintain.aspx" />
+    <Content Include="SSO\SSOPortal\SSOPortalMaintain.js" />
+    <Content Include="SSO\SSOPortal\SSOPortalService.asmx" />
+    <Content Include="SSO\SSOSession\SSOSessionInformation.aspx" />
+    <Content Include="SSO\SSOSession\SSOSessionInformation.js" />
+    <Content Include="SSO\SSOSession\SSOSessionInquiry.aspx" />
+    <Content Include="SSO\SSOSession\SSOSessionInquiry.js" />
+    <Content Include="SSO\SSOSession\SSOSessionService.asmx" />
+    <Content Include="StaticDataPermission\DataPermission\DataPermissionControl.js" />
+    <Content Include="StaticDataPermission\DataPermission\DataPermissionInquiry.js" />
+    <Content Include="StaticDataPermission\DataPermission\DataPermissionMaintain.aspx" />
+    <Content Include="StaticDataPermission\DataPermission\DataPermissionMaintain.js" />
+    <Content Include="StaticDataPermission\DataPermission\DataPermissionService.asmx" />
+    <Content Include="StaticDataPermission\DataPermission\DataPermissionValue.aspx" />
+    <Content Include="StaticDataPermission\DataPermission\DataPermissionValue.js" />
+    <Content Include="StaticDataPermission\Data\DataRuleGroupService.asmx" />
+    <Content Include="StaticDataPermission\Data\DataRuleMaintainGroupItem.aspx" />
+    <Content Include="StaticDataPermission\Data\DataRuleMaintainGroupItem.js" />
+    <Content Include="StaticDataPermission\Data\DataControl.js" />
+    <Content Include="StaticDataPermission\Data\DataInquiry.aspx" />
+    <Content Include="StaticDataPermission\Data\DataInquiry.js" />
+    <Content Include="StaticDataPermission\Data\DataMaintain.aspx" />
+    <Content Include="StaticDataPermission\DataPermission\DataPermissionInquiry.aspx" />
+    <Content Include="StaticDataPermission\Data\DataMaintain.js" />
+    <Content Include="StaticDataPermission\Data\DataRuleGroup.js" />
+    <Content Include="StaticDataPermission\Data\DataRuleItem.js" />
+    <Content Include="StaticDataPermission\Data\DataSelectedColumnService.asmx" />
+    <Content Include="StaticDataPermission\Data\DataService.asmx" />
+    <Content Include="SystemFunction\Domain\DomainImport.aspx" />
+    <Content Include="SystemFunction\Domain\DomainImport.js" />
+    <Content Include="SystemFunction\Domain\DomainInquiry.aspx" />
+    <Content Include="SystemFunction\Domain\DomainInquiry.js" />
+    <Content Include="SystemFunction\Domain\DomainMaintain.aspx" />
+    <Content Include="SystemFunction\Domain\DomainMaintain.js" />
+    <Content Include="SystemFunction\Domain\DomainService.asmx" />
+    <Content Include="SystemFunction\Function\CopyFunction.aspx" />
+    <Content Include="SystemFunction\Function\CopyFunction.js" />
+    <Content Include="SystemFunction\Function\FunctionDropDownList.js" />
+    <Content Include="SystemFunction\Function\FunctionImport.aspx" />
+    <Content Include="SystemFunction\Function\FunctionImport.js" />
+    <Content Include="SystemFunction\Function\FunctionInquiry.aspx" />
+    <Content Include="SystemFunction\Function\FunctionInquiry.js" />
+    <Content Include="SystemFunction\Function\FunctionMaintain.aspx" />
+    <Content Include="SystemFunction\Function\FunctionMaintain.js" />
+    <Content Include="SystemFunction\Function\FunctionScope.js" />
+    <Content Include="SystemFunction\Function\FunctionService.asmx" />
+    <Content Include="SystemFunction\Function\SelectSystemIcon.aspx" />
+    <Content Include="SystemFunction\Function\SelectSystemIcon.js" />
+    <Content Include="SystemFunction\Function\SystemIcon\action_add.gif" />
+    <Content Include="SystemFunction\Function\SystemIcon\action_check.gif" />
+    <Content Include="SystemFunction\Function\SystemIcon\action_delete.gif" />
+    <Content Include="SystemFunction\Function\SystemIcon\action_remove.gif" />
+    <Content Include="SystemFunction\Function\SystemIcon\add.gif" />
+    <Content Include="SystemFunction\Function\SystemIcon\address.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\administrative-docs.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\advertising.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\application.gif" />
+    <Content Include="SystemFunction\Function\SystemIcon\archives.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\arrow_back.gif" />
+    <Content Include="SystemFunction\Function\SystemIcon\arrow_back.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\arrow_down.gif" />
+    <Content Include="SystemFunction\Function\SystemIcon\arrow_next.gif" />
+    <Content Include="SystemFunction\Function\SystemIcon\arrow_next.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\arrow_top.gif" />
+    <Content Include="SystemFunction\Function\SystemIcon\attibutes.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\bank.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\basket.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\bestseller.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\billing.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\bookmark.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\brainstorming.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\business-contact.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\busy.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\Calendar.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\category.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\check.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\collaboration.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\collapse.jpg" />
+    <Content Include="SystemFunction\Function\SystemIcon\comment.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\comments.gif" />
+    <Content Include="SystemFunction\Function\SystemIcon\communication.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\config.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\consulting.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\contact.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\cost.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\credit-card.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\credit.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\current-work.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\customers.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\cv.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\Daohang.JPG" />
+    <Content Include="SystemFunction\Function\SystemIcon\database.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\date.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\delete.gif" />
+    <Content Include="SystemFunction\Function\SystemIcon\delicious.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\document-library.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\donate.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\download.gif" />
+    <Content Include="SystemFunction\Function\SystemIcon\drawings.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\edit.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\email.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\expand.jpg" />
+    <Content Include="SystemFunction\Function\SystemIcon\featured.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\feed.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\file.gif" />
+    <Content Include="SystemFunction\Function\SystemIcon\finished-work.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\flag.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\folder.gif" />
+    <Content Include="SystemFunction\Function\SystemIcon\folder.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\folder_files.gif" />
+    <Content Include="SystemFunction\Function\SystemIcon\folder_open.gif" />
+    <Content Include="SystemFunction\Function\SystemIcon\free-for-job.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\freelance.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\full-time.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\future-projects.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\graphic-design.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\heart.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\hire-me.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\home.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\illustration.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\invoice.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\issue.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\letter.gif" />
+    <Content Include="SystemFunction\Function\SystemIcon\letter_open.gif" />
+    <Content Include="SystemFunction\Function\SystemIcon\library.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\lightbulb.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\limited-edition.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\link.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\lock.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\login.gif" />
+    <Content Include="SystemFunction\Function\SystemIcon\login.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\logout.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\maximize.gif" />
+    <Content Include="SystemFunction\Function\SystemIcon\mbi_001.gif" />
+    <Content Include="SystemFunction\Function\SystemIcon\mbi_002.gif" />
+    <Content Include="SystemFunction\Function\SystemIcon\mbi_003.gif" />
+    <Content Include="SystemFunction\Function\SystemIcon\mbi_004.gif" />
+    <Content Include="SystemFunction\Function\SystemIcon\mbi_005.gif" />
+    <Content Include="SystemFunction\Function\SystemIcon\mbi_006.gif" />
+    <Content Include="SystemFunction\Function\SystemIcon\mbi_007.gif" />
+    <Content Include="SystemFunction\Function\SystemIcon\mbi_014.gif" />
+    <Content Include="SystemFunction\Function\SystemIcon\mbi_015.gif" />
+    <Content Include="SystemFunction\Function\SystemIcon\mbi_016.gif" />
+    <Content Include="SystemFunction\Function\SystemIcon\milestone.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\minimize.gif" />
+    <Content Include="SystemFunction\Function\SystemIcon\modify.gif" />
+    <Content Include="SystemFunction\Function\SystemIcon\my-account.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\networking.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\Niantie.JPG" />
+    <Content Include="SystemFunction\Function\SystemIcon\old-versions.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\order-1.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\order.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\payment-card.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\paypal.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\pen.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\pencil.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\phone.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\photography.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\plus.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\premium.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\print.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\process.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\product-1.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\product-design.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\product.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\progressbar.gif" />
+    <Content Include="SystemFunction\Function\SystemIcon\project.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\publish.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\refresh.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\reply.gif" />
+    <Content Include="SystemFunction\Function\SystemIcon\rss.gif" />
+    <Content Include="SystemFunction\Function\SystemIcon\save.gif" />
+    <Content Include="SystemFunction\Function\SystemIcon\Search.gif" />
+    <Content Include="SystemFunction\Function\SystemIcon\search.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\settings.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\shipping.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\showreel.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\sign-in.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\sign-out.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\sign-up.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\sitemap.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\special-offer.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\star.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\statistics.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\suppliers.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\tag.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\ticket.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\time.gif" />
+    <Content Include="SystemFunction\Function\SystemIcon\twitter.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\undo.gif" />
+    <Content Include="SystemFunction\Function\SystemIcon\undo.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\upcoming-work.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\update.gif" />
+    <Content Include="SystemFunction\Function\SystemIcon\user.gif" />
+    <Content Include="SystemFunction\Function\SystemIcon\user.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\warning.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\world.png" />
+    <Content Include="SystemFunction\Function\SystemIcon\zoom.png" />
+    <Content Include="SystemFunction\Operation\OperationMaintain.aspx" />
+    <Content Include="SystemFunction\Operation\OperationMaintain.js" />
+    <Content Include="SystemFunction\Operation\OperationService.asmx" />
+    <Content Include="SystemFunction\Product\ProductImport.aspx" />
+    <Content Include="SystemFunction\Product\ProductImport.js" />
+    <Content Include="SystemFunction\Product\ProductInquiry.aspx" />
+    <Content Include="SystemFunction\Product\ProductInquiry.js" />
+    <Content Include="SystemFunction\Product\ProductMaintain.aspx" />
+    <Content Include="SystemFunction\Product\ProductMaintain.js" />
+    <Content Include="SystemFunction\Product\ProductService.asmx" />
+    <Content Include="SystemFunction\System1\SystemControl.js" />
+    <Content Include="SystemFunction\System1\SystemImport.aspx" />
+    <Content Include="SystemFunction\System1\SystemImport.js" />
+    <Content Include="SystemFunction\System1\SystemInquiry.aspx" />
+    <Content Include="SystemFunction\System1\SystemInquiry.js" />
+    <Content Include="SystemFunction\System1\SystemMaintain.aspx" />
+    <Content Include="SystemFunction\System1\SystemMaintain.js" />
+    <Content Include="SystemFunction\System1\SystemService.asmx" />
+    <Content Include="SystemMaintenance\SystemGroup\SystemGroupControl.js" />
+    <Content Include="SystemMaintenance\SystemGroup\SystemGroupInquiry.aspx" />
+    <Content Include="SystemMaintenance\SystemGroup\SystemGroupInquiry.js" />
+    <Content Include="SystemMaintenance\SystemGroup\SystemGroupMaintain.aspx" />
+    <Content Include="SystemMaintenance\SystemGroup\SystemGroupMaintain.js" />
+    <Content Include="SystemMaintenance\SystemGroup\SystemGroupService.asmx" />
+    <Content Include="SystemMaintenance\SystemMaintenance\SystemMaintenanceControl.js" />
+    <Content Include="SystemMaintenance\SystemMaintenance\SystemMaintenanceInquiry.aspx" />
+    <Content Include="SystemMaintenance\SystemMaintenance\SystemMaintenanceInquiry.js" />
+    <Content Include="SystemMaintenance\SystemMaintenance\SystemMaintenanceService.asmx" />
+    <Content Include="SystemMaintenance\SystemMaintenance\SystemMaintenanceMaintain.aspx" />
+    <Content Include="SystemMaintenance\SystemMaintenance\SystemMaintenanceMaintain.js" />
+    <Content Include="Other\Test\JqueryTest.aspx" />
+    <Content Include="Other\Test\JqueryTest.js" />
+    <Content Include="Other\Test\JqueryTestService.asmx" />
+    <Content Include="Temporary\1.txt" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommonPage\ExportToXml.aspx.cs">
+      <DependentUpon>ExportToXml.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CommonPage\ExportToXml.aspx.designer.cs">
+      <DependentUpon>ExportToXml.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CommonPage\FileUpload.aspx.cs">
+      <DependentUpon>FileUpload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CommonPage\FileUpload.aspx.designer.cs">
+      <DependentUpon>FileUpload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CommonPage\GetXmlImportList.ashx.cs">
+      <DependentUpon>GetXmlImportList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Config\GlobalResource\ConfigGlobalResourceImport.aspx.cs">
+      <DependentUpon>ConfigGlobalResourceImport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Config\GlobalResource\ConfigGlobalResourceImport.aspx.designer.cs">
+      <DependentUpon>ConfigGlobalResourceImport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Config\GlobalResource\ConfigGlobalResourceInquiry.aspx.cs">
+      <DependentUpon>ConfigGlobalResourceInquiry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Config\GlobalResource\ConfigGlobalResourceInquiry.aspx.designer.cs">
+      <DependentUpon>ConfigGlobalResourceInquiry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Config\GlobalResource\ConfigGlobalResourceMaintain.aspx.cs">
+      <DependentUpon>ConfigGlobalResourceMaintain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Config\GlobalResource\ConfigGlobalResourceMaintain.aspx.designer.cs">
+      <DependentUpon>ConfigGlobalResourceMaintain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Config\GlobalResource\ConfigGlobalResourceService.asmx.cs">
+      <DependentUpon>ConfigGlobalResourceService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Config\GlobalResource\GetBaseConfigGlobalResourceList.ashx.cs">
+      <DependentUpon>GetBaseConfigGlobalResourceList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Config\GlobalSetting\ConfigGlobalImport.aspx.cs">
+      <DependentUpon>ConfigGlobalImport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Config\GlobalSetting\ConfigGlobalImport.aspx.designer.cs">
+      <DependentUpon>ConfigGlobalImport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Config\GlobalSetting\ConfigGlobalInquiry.aspx.cs">
+      <DependentUpon>ConfigGlobalInquiry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Config\GlobalSetting\ConfigGlobalInquiry.aspx.designer.cs">
+      <DependentUpon>ConfigGlobalInquiry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Config\GlobalSetting\ConfigGlobalMaintain.aspx.cs">
+      <DependentUpon>ConfigGlobalMaintain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Config\GlobalSetting\ConfigGlobalMaintain.aspx.designer.cs">
+      <DependentUpon>ConfigGlobalMaintain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Config\GlobalSetting\ConfigGlobalService.asmx.cs">
+      <DependentUpon>ConfigGlobalService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Config\GlobalSetting\GetBaseConfigGlobalList.ashx.cs">
+      <DependentUpon>GetBaseConfigGlobalList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Config\JobSetting\ConfigJobImport.aspx.cs">
+      <DependentUpon>ConfigJobImport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Config\JobSetting\ConfigJobImport.aspx.designer.cs">
+      <DependentUpon>ConfigJobImport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Config\SystemSetting\ConfigSystemImport.aspx.cs">
+      <DependentUpon>ConfigSystemImport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Config\SystemSetting\ConfigSystemImport.aspx.designer.cs">
+      <DependentUpon>ConfigSystemImport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Config\SystemSetting\ConfigSystemInquiry.aspx.cs">
+      <DependentUpon>ConfigSystemInquiry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Config\SystemSetting\ConfigSystemInquiry.aspx.designer.cs">
+      <DependentUpon>ConfigSystemInquiry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Config\SystemSetting\ConfigSystemMaintain.aspx.cs">
+      <DependentUpon>ConfigSystemMaintain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Config\SystemSetting\ConfigSystemMaintain.aspx.designer.cs">
+      <DependentUpon>ConfigSystemMaintain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Config\SystemSetting\ConfigSystemService.asmx.cs">
+      <DependentUpon>ConfigSystemService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Config\SystemSetting\GetBaseConfigSystemList.ashx.cs">
+      <DependentUpon>GetBaseConfigSystemList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="MultiLanguage\MessageCategory\GetBaseMessageCategoryList.ashx.cs">
+      <DependentUpon>GetBaseMessageCategoryList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="MultiLanguage\MessageCategory\MessageCategoryInquiry.aspx.cs">
+      <DependentUpon>MessageCategoryInquiry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MultiLanguage\MessageCategory\MessageCategoryInquiry.aspx.designer.cs">
+      <DependentUpon>MessageCategoryInquiry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MultiLanguage\MessageCategory\MessageCategoryMaintain.aspx.cs">
+      <DependentUpon>MessageCategoryMaintain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MultiLanguage\MessageCategory\MessageCategoryMaintain.aspx.designer.cs">
+      <DependentUpon>MessageCategoryMaintain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MultiLanguage\MessageCategory\MessageCategoryService.asmx.cs">
+      <DependentUpon>MessageCategoryService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MultiLanguage\MessageContent\GetBaseMessageContentList.ashx.cs">
+      <DependentUpon>GetBaseMessageContentList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="MultiLanguage\MessageContent\MessageContentInquiry.aspx.cs">
+      <DependentUpon>MessageContentInquiry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MultiLanguage\MessageContent\MessageContentInquiry.aspx.designer.cs">
+      <DependentUpon>MessageContentInquiry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MultiLanguage\MessageContent\MessageContentMaintain.aspx.cs">
+      <DependentUpon>MessageContentMaintain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MultiLanguage\MessageContent\MessageContentMaintain.aspx.designer.cs">
+      <DependentUpon>MessageContentMaintain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MultiLanguage\MessageContent\MessageContentService.asmx.cs">
+      <DependentUpon>MessageContentService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MultiLanguage\MessageType\GetBaseMessageTypeList.ashx.cs">
+      <DependentUpon>GetBaseMessageTypeList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="MultiLanguage\MessageType\MessageTypeInquiry.aspx.cs">
+      <DependentUpon>MessageTypeInquiry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MultiLanguage\MessageType\MessageTypeInquiry.aspx.designer.cs">
+      <DependentUpon>MessageTypeInquiry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MultiLanguage\MessageType\MessageTypeMaintain.aspx.cs">
+      <DependentUpon>MessageTypeMaintain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MultiLanguage\MessageType\MessageTypeMaintain.aspx.designer.cs">
+      <DependentUpon>MessageTypeMaintain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MultiLanguage\MessageType\MessageTypeService.asmx.cs">
+      <DependentUpon>MessageTypeService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Config\JobSetting\ConfigJobInquiry.aspx.cs">
+      <DependentUpon>ConfigJobInquiry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Config\JobSetting\ConfigJobInquiry.aspx.designer.cs">
+      <DependentUpon>ConfigJobInquiry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Config\JobSetting\ConfigJobMaintain.aspx.cs">
+      <DependentUpon>ConfigJobMaintain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Config\JobSetting\ConfigJobMaintain.aspx.designer.cs">
+      <DependentUpon>ConfigJobMaintain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Config\JobSetting\ConfigJobService.asmx.cs">
+      <DependentUpon>ConfigJobService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Config\JobSetting\GetBaseConfigJobList.ashx.cs">
+      <DependentUpon>GetBaseConfigJobList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="MultiLanguage\PageMultiLanguageGlobal\GetPageMultiLanguageGlobalList.ashx.cs">
+      <DependentUpon>GetPageMultiLanguageGlobalList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="MultiLanguage\PageMultiLanguageGlobal\PageMultiLanguageGlobalExport.aspx.cs">
+      <DependentUpon>PageMultiLanguageGlobalExport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MultiLanguage\PageMultiLanguageGlobal\PageMultiLanguageGlobalExport.aspx.designer.cs">
+      <DependentUpon>PageMultiLanguageGlobalExport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MultiLanguage\PageMultiLanguageGlobal\PageMultiLanguageGlobalInquiry.aspx.cs">
+      <DependentUpon>PageMultiLanguageGlobalInquiry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MultiLanguage\PageMultiLanguageGlobal\PageMultiLanguageGlobalInquiry.aspx.designer.cs">
+      <DependentUpon>PageMultiLanguageGlobalInquiry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MultiLanguage\PageMultiLanguageGlobal\PageMultiLanguageGlobalMaintain.aspx.cs">
+      <DependentUpon>PageMultiLanguageGlobalMaintain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MultiLanguage\PageMultiLanguageGlobal\PageMultiLanguageGlobalMaintain.aspx.designer.cs">
+      <DependentUpon>PageMultiLanguageGlobalMaintain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MultiLanguage\PageMultiLanguageGlobal\PageMultiLanguageGlobalService.asmx.cs">
+      <DependentUpon>PageMultiLanguageGlobalService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MultiLanguage\PageMultiLanguage\GetControlLanguageList.ashx.cs">
+      <DependentUpon>GetControlLanguageList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="MultiLanguage\PageMultiLanguage\GetPageMultiLanguageList.ashx.cs">
+      <DependentUpon>GetPageMultiLanguageList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="MultiLanguage\PageMultiLanguage\PageMultiLanguageExport.aspx.cs">
+      <DependentUpon>PageMultiLanguageExport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MultiLanguage\PageMultiLanguage\PageMultiLanguageExport.aspx.designer.cs">
+      <DependentUpon>PageMultiLanguageExport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MultiLanguage\PageMultiLanguage\PageMultiLanguageInquiry.aspx.cs">
+      <DependentUpon>PageMultiLanguageInquiry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MultiLanguage\PageMultiLanguage\PageMultiLanguageInquiry.aspx.designer.cs">
+      <DependentUpon>PageMultiLanguageInquiry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MultiLanguage\PageMultiLanguage\PageMultiLanguageMaintain.aspx.cs">
+      <DependentUpon>PageMultiLanguageMaintain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MultiLanguage\PageMultiLanguage\PageMultiLanguageMaintain.aspx.designer.cs">
+      <DependentUpon>PageMultiLanguageMaintain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MultiLanguage\PageMultiLanguage\PageMultiLanguageService.asmx.cs">
+      <DependentUpon>PageMultiLanguageService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="OrgUser\Department\DepartmentFrame.aspx.cs">
+      <DependentUpon>DepartmentFrame.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrgUser\Department\DepartmentFrame.aspx.designer.cs">
+      <DependentUpon>DepartmentFrame.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrgUser\Department\DepartmentInformation.aspx.cs">
+      <DependentUpon>DepartmentInformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrgUser\Department\DepartmentInformation.aspx.designer.cs">
+      <DependentUpon>DepartmentInformation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrgUser\Department\DepartmentRole\DepartmentRoleList.aspx.cs">
+      <DependentUpon>DepartmentRoleList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrgUser\Department\DepartmentRole\DepartmentRoleList.aspx.designer.cs">
+      <DependentUpon>DepartmentRoleList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrgUser\Department\DepartmentRole\GetDepartmentRoleList.ashx.cs">
+      <DependentUpon>GetDepartmentRoleList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="OrgUser\Department\DepartmentService.asmx.cs">
+      <DependentUpon>DepartmentService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="OrgUser\Department\GetDepartmentTreeList.ashx.cs">
+      <DependentUpon>GetDepartmentTreeList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="OrgUser\Department\GetDepartmentUserList.ashx.cs">
+      <DependentUpon>GetDepartmentUserList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="OrgUser\Department\GetSubDepartment.ashx.cs">
+      <DependentUpon>GetSubDepartment.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="OrgUser\Department\GetDepartmentList.ashx.cs">
+      <DependentUpon>GetDepartmentList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="OrgUser\Department\SelectDepartment.aspx.cs">
+      <DependentUpon>SelectDepartment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrgUser\Department\SelectDepartment.aspx.designer.cs">
+      <DependentUpon>SelectDepartment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrgUser\Department\SubDepartment.aspx.cs">
+      <DependentUpon>SubDepartment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrgUser\Department\SubDepartment.aspx.designer.cs">
+      <DependentUpon>SubDepartment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrgUser\Department\DepartmentInquiry.aspx.cs">
+      <DependentUpon>DepartmentInquiry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrgUser\Department\DepartmentInquiry.aspx.designer.cs">
+      <DependentUpon>DepartmentInquiry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrgUser\Department\DepartmentUser.aspx.cs">
+      <DependentUpon>DepartmentUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrgUser\Department\DepartmentUser.aspx.designer.cs">
+      <DependentUpon>DepartmentUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrgUser\Department\DepartmentTree.aspx.cs">
+      <DependentUpon>DepartmentTree.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrgUser\Department\DepartmentTree.aspx.designer.cs">
+      <DependentUpon>DepartmentTree.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrgUser\Department\SelectScope.aspx.cs">
+      <DependentUpon>SelectScope.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrgUser\Department\SelectScope.aspx.designer.cs">
+      <DependentUpon>SelectScope.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrgUser\Org\GetBaseOrgList.ashx.cs">
+      <DependentUpon>GetBaseOrgList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="OrgUser\Org\OrgImport.aspx.cs">
+      <DependentUpon>OrgImport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrgUser\Org\OrgImport.aspx.designer.cs">
+      <DependentUpon>OrgImport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrgUser\Org\OrgInquiry.aspx.cs">
+      <DependentUpon>OrgInquiry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrgUser\Org\OrgInquiry.aspx.designer.cs">
+      <DependentUpon>OrgInquiry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrgUser\Org\OrgMaintain.aspx.cs">
+      <DependentUpon>OrgMaintain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrgUser\Org\OrgMaintain.aspx.designer.cs">
+      <DependentUpon>OrgMaintain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrgUser\Org\OrgService.asmx.cs">
+      <DependentUpon>OrgService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="OrgUser\User\GetBaseUserList.ashx.cs">
+      <DependentUpon>GetBaseUserList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="OrgUser\User\UserInformation.aspx.cs">
+      <DependentUpon>UserInformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrgUser\User\UserInformation.aspx.designer.cs">
+      <DependentUpon>UserInformation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrgUser\User\UserFrame.aspx.cs">
+      <DependentUpon>UserFrame.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrgUser\User\UserFrame.aspx.designer.cs">
+      <DependentUpon>UserFrame.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrgUser\User\UserInquiry.aspx.cs">
+      <DependentUpon>UserInquiry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrgUser\User\UserInquiry.aspx.designer.cs">
+      <DependentUpon>UserInquiry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrgUser\User\UserMaintain.aspx.cs">
+      <DependentUpon>UserMaintain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrgUser\User\UserMaintain.aspx.designer.cs">
+      <DependentUpon>UserMaintain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrgUser\User\UserService.asmx.cs">
+      <DependentUpon>UserService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MultiLanguage\MultiLanguage\GetMultiLanguageList.ashx.cs">
+      <DependentUpon>GetMultiLanguageList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="MultiLanguage\MultiLanguage\MultiLanguageInquiry.aspx.cs">
+      <DependentUpon>MultiLanguageInquiry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MultiLanguage\MultiLanguage\MultiLanguageInquiry.aspx.designer.cs">
+      <DependentUpon>MultiLanguageInquiry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MultiLanguage\MultiLanguage\MultiLanguageMaintain.aspx.cs">
+      <DependentUpon>MultiLanguageMaintain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MultiLanguage\MultiLanguage\MultiLanguageMaintain.aspx.designer.cs">
+      <DependentUpon>MultiLanguageMaintain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MultiLanguage\MultiLanguage\MultiLanguageService.asmx.cs">
+      <DependentUpon>MultiLanguageService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Other\RunJob\RunJob.aspx.cs">
+      <DependentUpon>RunJob.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Other\RunJob\RunJob.aspx.designer.cs">
+      <DependentUpon>RunJob.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PermissionModel\PermissionDetail\FunctionPermission\FunctionPermission.aspx.cs">
+      <DependentUpon>FunctionPermission.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PermissionModel\PermissionDetail\FunctionPermission\FunctionPermission.aspx.designer.cs">
+      <DependentUpon>FunctionPermission.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PermissionModel\PermissionDetail\FunctionPermission\GetFunctionPermissionList.ashx.cs">
+      <DependentUpon>GetFunctionPermissionList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="PermissionModel\PermissionDetail\SensitiveColumnPermission\GetSensitiveColumnPermissionList.ashx.cs">
+      <DependentUpon>GetSensitiveColumnPermissionList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="PermissionModel\PermissionDetail\SensitiveColumnPermission\SensitiveColumnPermissionList.aspx.cs">
+      <DependentUpon>SensitiveColumnPermissionList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PermissionModel\PermissionDetail\SensitiveColumnPermission\SensitiveColumnPermissionList.aspx.designer.cs">
+      <DependentUpon>SensitiveColumnPermissionList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PermissionModel\PermissionDetail\SensitiveColumnPermission\SensitiveColumnPermissionMaintain.aspx.cs">
+      <DependentUpon>SensitiveColumnPermissionMaintain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PermissionModel\PermissionDetail\SensitiveColumnPermission\SensitiveColumnPermissionMaintain.aspx.designer.cs">
+      <DependentUpon>SensitiveColumnPermissionMaintain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrgUser\User\UserRole\GetUserRoleList.ashx.cs">
+      <DependentUpon>GetUserRoleList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="OrgUser\User\UserRole\UserRoleList.aspx.cs">
+      <DependentUpon>UserRoleList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrgUser\User\UserRole\UserRoleList.aspx.designer.cs">
+      <DependentUpon>UserRoleList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PermissionModel\PermissionMode\GetBasePermissionModeList.ashx.cs">
+      <DependentUpon>GetBasePermissionModeList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="PermissionModel\PermissionMode\PermissionModeService.asmx.cs">
+      <DependentUpon>PermissionModeService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PermissionModel\Permission\GetBasePermissionList.ashx.cs">
+      <DependentUpon>GetBasePermissionList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="PermissionModel\Permission\PermissionInquiry.aspx.cs">
+      <DependentUpon>PermissionInquiry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PermissionModel\Permission\PermissionInquiry.aspx.designer.cs">
+      <DependentUpon>PermissionInquiry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PermissionModel\Permission\PermissionMaintain.aspx.cs">
+      <DependentUpon>PermissionMaintain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PermissionModel\Permission\PermissionMaintain.aspx.designer.cs">
+      <DependentUpon>PermissionMaintain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PermissionModel\PermissionMode\PermissionModeInquiry.aspx.cs">
+      <DependentUpon>PermissionModeInquiry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PermissionModel\PermissionMode\PermissionModeInquiry.aspx.designer.cs">
+      <DependentUpon>PermissionModeInquiry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PermissionModel\PermissionMode\PermissionModeMaintain.aspx.cs">
+      <DependentUpon>PermissionModeMaintain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PermissionModel\PermissionMode\PermissionModeMaintain.aspx.designer.cs">
+      <DependentUpon>PermissionModeMaintain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PermissionModel\Permission\PermissionService.asmx.cs">
+      <DependentUpon>PermissionService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PermissionModel\Permission\ViewBaseResourceService.asmx.cs">
+      <DependentUpon>ViewBaseResourceService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PermissionModel\Permission\ViewBaseSubjectService.asmx.cs">
+      <DependentUpon>ViewBaseSubjectService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PermissionModel\SubjectPermission\SubjectPermissionFrame.aspx.cs">
+      <DependentUpon>SubjectPermissionFrame.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PermissionModel\SubjectPermission\SubjectPermissionFrame.aspx.designer.cs">
+      <DependentUpon>SubjectPermissionFrame.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PermissionModel\UserProductPermissionInquiry\GetUserProductPermissionList.ashx.cs">
+      <DependentUpon>GetUserProductPermissionList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="PermissionModel\UserProductPermissionInquiry\UserProductPermissionInquiry.aspx.cs">
+      <DependentUpon>UserProductPermissionInquiry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PermissionModel\UserProductPermissionInquiry\UserProductPermissionInquiry.aspx.designer.cs">
+      <DependentUpon>UserProductPermissionInquiry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Portal\FrameworkLog\FrameworkLogInformation.aspx.cs">
+      <DependentUpon>FrameworkLogInformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Portal\FrameworkLog\FrameworkLogInformation.aspx.designer.cs">
+      <DependentUpon>FrameworkLogInformation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Portal\FrameworkLog\FrameworkLogInquiry.aspx.cs">
+      <DependentUpon>FrameworkLogInquiry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Portal\FrameworkLog\FrameworkLogInquiry.aspx.designer.cs">
+      <DependentUpon>FrameworkLogInquiry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Portal\FrameworkLog\FrameworkLogService.asmx.cs">
+      <DependentUpon>FrameworkLogService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Portal\FrameworkLog\GetFrameworkLogList.ashx.cs">
+      <DependentUpon>GetFrameworkLogList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Portal\PortalHomePage\GetPortalHomePageNewsList.ashx.cs">
+      <DependentUpon>GetPortalHomePageNewsList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Portal\PortalHomePage\PortalHomePage.aspx.cs">
+      <DependentUpon>PortalHomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Portal\PortalHomePage\PortalHomePage.aspx.designer.cs">
+      <DependentUpon>PortalHomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Portal\PortalHomePage\PortalHomePageService.asmx.cs">
+      <DependentUpon>PortalHomePageService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Portal\PortalHomePage\PortalNewsDetail.aspx.cs">
+      <DependentUpon>PortalNewsDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Portal\PortalHomePage\PortalNewsDetail.aspx.designer.cs">
+      <DependentUpon>PortalNewsDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Portal\PortalLink\GetPortalLinkList.ashx.cs">
+      <DependentUpon>GetPortalLinkList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Portal\PortalLink\PortalLinkInquiry.aspx.cs">
+      <DependentUpon>PortalLinkInquiry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Portal\PortalLink\PortalLinkInquiry.aspx.designer.cs">
+      <DependentUpon>PortalLinkInquiry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Portal\PortalLink\PortalLinkMaintain.aspx.cs">
+      <DependentUpon>PortalLinkMaintain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Portal\PortalLink\PortalLinkMaintain.aspx.designer.cs">
+      <DependentUpon>PortalLinkMaintain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Portal\PortalLink\PortalLinkService.asmx.cs">
+      <DependentUpon>PortalLinkService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Portal\PortalNews\GetPortalNewsList.ashx.cs">
+      <DependentUpon>GetPortalNewsList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Portal\PortalNews\PortalNewsContent.aspx.cs">
+      <DependentUpon>PortalNewsContent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Portal\PortalNews\PortalNewsContent.aspx.designer.cs">
+      <DependentUpon>PortalNewsContent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Portal\PortalNews\PortalNewsInquiry.aspx.cs">
+      <DependentUpon>PortalNewsInquiry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Portal\PortalNews\PortalNewsInquiry.aspx.designer.cs">
+      <DependentUpon>PortalNewsInquiry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Portal\PortalNews\PortalNewsMaintain.aspx.cs">
+      <DependentUpon>PortalNewsMaintain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Portal\PortalNews\PortalNewsMaintain.aspx.designer.cs">
+      <DependentUpon>PortalNewsMaintain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Portal\PortalNews\PortalNewsService.asmx.cs">
+      <DependentUpon>PortalNewsService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Role\RoleUser\RoleUserMaintain.aspx.cs">
+      <DependentUpon>RoleUserMaintain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Role\RoleUser\RoleUserMaintain.aspx.designer.cs">
+      <DependentUpon>RoleUserMaintain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Role\Role\RoleImport.aspx.cs">
+      <DependentUpon>RoleImport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Role\Role\RoleImport.aspx.designer.cs">
+      <DependentUpon>RoleImport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Role\Role\SelectRole.aspx.cs">
+      <DependentUpon>SelectRole.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Role\Role\SelectRole.aspx.designer.cs">
+      <DependentUpon>SelectRole.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrgUser\User\SelectUser.aspx.cs">
+      <DependentUpon>SelectUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrgUser\User\SelectUser.aspx.designer.cs">
+      <DependentUpon>SelectUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Role\RoleDepartment\GetRoleDepartmentList.ashx.cs">
+      <DependentUpon>GetRoleDepartmentList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Role\RoleDepartment\RoleDepartmentService.asmx.cs">
+      <DependentUpon>RoleDepartmentService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Role\RoleUser\GetRoleUserList.ashx.cs">
+      <DependentUpon>GetRoleUserList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Role\RoleUser\RoleUserService.asmx.cs">
+      <DependentUpon>RoleUserService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Role\Role\GetBaseRoleList.ashx.cs">
+      <DependentUpon>GetBaseRoleList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Role\RoleDepartment\RoleDepartmentList.aspx.cs">
+      <DependentUpon>RoleDepartmentList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Role\RoleDepartment\RoleDepartmentList.aspx.designer.cs">
+      <DependentUpon>RoleDepartmentList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Role\RoleDepartment\RoleDepartmentNew.aspx.cs">
+      <DependentUpon>RoleDepartmentNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Role\RoleDepartment\RoleDepartmentNew.aspx.designer.cs">
+      <DependentUpon>RoleDepartmentNew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Role\Role\RoleFrame.aspx.cs">
+      <DependentUpon>RoleFrame.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Role\Role\RoleFrame.aspx.designer.cs">
+      <DependentUpon>RoleFrame.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Role\Role\RoleInquiry.aspx.cs">
+      <DependentUpon>RoleInquiry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Role\Role\RoleInquiry.aspx.designer.cs">
+      <DependentUpon>RoleInquiry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Role\Role\RoleMaintain.aspx.cs">
+      <DependentUpon>RoleMaintain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Role\Role\RoleMaintain.aspx.designer.cs">
+      <DependentUpon>RoleMaintain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Role\Role\RoleService.asmx.cs">
+      <DependentUpon>RoleService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Role\RoleUser\RoleUserList.aspx.cs">
+      <DependentUpon>RoleUserList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Role\RoleUser\RoleUserList.aspx.designer.cs">
+      <DependentUpon>RoleUserList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Role\RoleUser\RoleUserNew.aspx.cs">
+      <DependentUpon>RoleUserNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Role\RoleUser\RoleUserNew.aspx.designer.cs">
+      <DependentUpon>RoleUserNew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Role\Role\RoleInformation.aspx.cs">
+      <DependentUpon>RoleInformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Role\Role\RoleInformation.aspx.designer.cs">
+      <DependentUpon>RoleInformation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SensitiveData\DataSource\DataSourceInquiry.aspx.cs">
+      <DependentUpon>DataSourceInquiry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SensitiveData\DataSource\DataSourceInquiry.aspx.designer.cs">
+      <DependentUpon>DataSourceInquiry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SensitiveData\DataSource\DataSourceMaintain.aspx.cs">
+      <DependentUpon>DataSourceMaintain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SensitiveData\DataSource\DataSourceMaintain.aspx.designer.cs">
+      <DependentUpon>DataSourceMaintain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SensitiveData\DataSource\DataSourceService.asmx.cs">
+      <DependentUpon>DataSourceService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SensitiveData\DataSource\GetBaseDataSourceList.ashx.cs">
+      <DependentUpon>GetBaseDataSourceList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="SensitiveData\DataTableColumn\DataTableColumnMaintain.aspx.cs">
+      <DependentUpon>DataTableColumnMaintain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SensitiveData\DataTableColumn\DataTableColumnMaintain.aspx.designer.cs">
+      <DependentUpon>DataTableColumnMaintain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SensitiveData\DataTableColumn\DataTableColumnService.asmx.cs">
+      <DependentUpon>DataTableColumnService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SensitiveData\DataTableColumn\GetBaseDataTableColumnList.ashx.cs">
+      <DependentUpon>GetBaseDataTableColumnList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="SensitiveData\DataTable\DataTableInquiry.aspx.cs">
+      <DependentUpon>DataTableInquiry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SensitiveData\DataTable\DataTableInquiry.aspx.designer.cs">
+      <DependentUpon>DataTableInquiry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SensitiveData\DataTable\DataTableMaintain.aspx.cs">
+      <DependentUpon>DataTableMaintain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SensitiveData\DataTable\DataTableMaintain.aspx.designer.cs">
+      <DependentUpon>DataTableMaintain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SensitiveData\DataTable\DataTableService.asmx.cs">
+      <DependentUpon>DataTableService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SensitiveData\DataTable\GetBaseDataTableList.ashx.cs">
+      <DependentUpon>GetBaseDataTableList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="SSO\SSOPortal\GetSSOPortalList.ashx.cs">
+      <DependentUpon>GetSSOPortalList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="SSO\SSOPortal\SSOPortalInquiry.aspx.cs">
+      <DependentUpon>SSOPortalInquiry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SSO\SSOPortal\SSOPortalInquiry.aspx.designer.cs">
+      <DependentUpon>SSOPortalInquiry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SSO\SSOPortal\SSOPortalMaintain.aspx.cs">
+      <DependentUpon>SSOPortalMaintain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SSO\SSOPortal\SSOPortalMaintain.aspx.designer.cs">
+      <DependentUpon>SSOPortalMaintain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SSO\SSOPortal\SSOPortalService.asmx.cs">
+      <DependentUpon>SSOPortalService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SSO\SSOSession\GetSSOSessionList.ashx.cs">
+      <DependentUpon>GetSSOSessionList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="SSO\SSOSession\SSOSessionInformation.aspx.cs">
+      <DependentUpon>SSOSessionInformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SSO\SSOSession\SSOSessionInformation.aspx.designer.cs">
+      <DependentUpon>SSOSessionInformation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SSO\SSOSession\SSOSessionInquiry.aspx.cs">
+      <DependentUpon>SSOSessionInquiry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SSO\SSOSession\SSOSessionInquiry.aspx.designer.cs">
+      <DependentUpon>SSOSessionInquiry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SSO\SSOSession\SSOSessionService.asmx.cs">
+      <DependentUpon>SSOSessionService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="StaticDataPermission\DataPermission\DataPermissionMaintain.aspx.cs">
+      <DependentUpon>DataPermissionMaintain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StaticDataPermission\DataPermission\DataPermissionMaintain.aspx.designer.cs">
+      <DependentUpon>DataPermissionMaintain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StaticDataPermission\DataPermission\DataPermissionService.asmx.cs">
+      <DependentUpon>DataPermissionService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="StaticDataPermission\DataPermission\DataPermissionValue.aspx.cs">
+      <DependentUpon>DataPermissionValue.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StaticDataPermission\DataPermission\DataPermissionValue.aspx.designer.cs">
+      <DependentUpon>DataPermissionValue.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StaticDataPermission\DataPermission\GetBaseDataPermissionList.ashx.cs">
+      <DependentUpon>GetBaseDataPermissionList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="StaticDataPermission\DataPermission\GetOptionsOriginalData.ashx.cs">
+      <DependentUpon>GetOptionsOriginalData.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="StaticDataPermission\Data\DataRuleGroupService.asmx.cs">
+      <DependentUpon>DataRuleGroupService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="StaticDataPermission\Data\DataRuleMaintainGroupItem.aspx.cs">
+      <DependentUpon>DataRuleMaintainGroupItem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StaticDataPermission\Data\DataRuleMaintainGroupItem.aspx.designer.cs">
+      <DependentUpon>DataRuleMaintainGroupItem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StaticDataPermission\Data\GetBaseDataRuleItemList.ashx.cs">
+      <DependentUpon>GetBaseDataRuleItemList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="StaticDataPermission\Data\DataInquiry.aspx.cs">
+      <DependentUpon>DataInquiry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StaticDataPermission\Data\DataInquiry.aspx.designer.cs">
+      <DependentUpon>DataInquiry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StaticDataPermission\Data\DataMaintain.aspx.cs">
+      <DependentUpon>DataMaintain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StaticDataPermission\Data\DataMaintain.aspx.designer.cs">
+      <DependentUpon>DataMaintain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StaticDataPermission\DataPermission\DataPermissionInquiry.aspx.cs">
+      <DependentUpon>DataPermissionInquiry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StaticDataPermission\DataPermission\DataPermissionInquiry.aspx.designer.cs">
+      <DependentUpon>DataPermissionInquiry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StaticDataPermission\Data\DataSelectedColumnService.asmx.cs">
+      <DependentUpon>DataSelectedColumnService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="StaticDataPermission\Data\DataService.asmx.cs">
+      <DependentUpon>DataService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="StaticDataPermission\Data\GetBaseDataList.ashx.cs">
+      <DependentUpon>GetBaseDataList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="StaticDataPermission\Data\GetBaseDataSelectedColumnList.ashx.cs">
+      <DependentUpon>GetBaseDataSelectedColumnList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="SystemFunction\Domain\DomainImport.aspx.cs">
+      <DependentUpon>DomainImport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SystemFunction\Domain\DomainImport.aspx.designer.cs">
+      <DependentUpon>DomainImport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SystemFunction\Domain\DomainInquiry.aspx.cs">
+      <DependentUpon>DomainInquiry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SystemFunction\Domain\DomainInquiry.aspx.designer.cs">
+      <DependentUpon>DomainInquiry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SystemFunction\Domain\DomainMaintain.aspx.cs">
+      <DependentUpon>DomainMaintain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SystemFunction\Domain\DomainMaintain.aspx.designer.cs">
+      <DependentUpon>DomainMaintain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SystemFunction\Domain\DomainService.asmx.cs">
+      <DependentUpon>DomainService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SystemFunction\Domain\GetBaseDomainList.ashx.cs">
+      <DependentUpon>GetBaseDomainList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="SystemFunction\Function\CopyFunction.aspx.cs">
+      <DependentUpon>CopyFunction.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SystemFunction\Function\CopyFunction.aspx.designer.cs">
+      <DependentUpon>CopyFunction.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SystemFunction\Function\FunctionImport.aspx.cs">
+      <DependentUpon>FunctionImport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SystemFunction\Function\FunctionImport.aspx.designer.cs">
+      <DependentUpon>FunctionImport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SystemFunction\Function\FunctionInquiry.aspx.cs">
+      <DependentUpon>FunctionInquiry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SystemFunction\Function\FunctionInquiry.aspx.designer.cs">
+      <DependentUpon>FunctionInquiry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SystemFunction\Function\FunctionMaintain.aspx.cs">
+      <DependentUpon>FunctionMaintain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SystemFunction\Function\FunctionMaintain.aspx.designer.cs">
+      <DependentUpon>FunctionMaintain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SystemFunction\Function\FunctionService.asmx.cs">
+      <DependentUpon>FunctionService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SystemFunction\Function\GetSystemFunctionList.ashx.cs">
+      <DependentUpon>GetSystemFunctionList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="SystemFunction\Function\GetSystemIconList.ashx.cs">
+      <DependentUpon>GetSystemIconList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="SystemFunction\Function\SelectSystemIcon.aspx.cs">
+      <DependentUpon>SelectSystemIcon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SystemFunction\Function\SelectSystemIcon.aspx.designer.cs">
+      <DependentUpon>SelectSystemIcon.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SystemFunction\Operation\OperationMaintain.aspx.cs">
+      <DependentUpon>OperationMaintain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SystemFunction\Operation\OperationMaintain.aspx.designer.cs">
+      <DependentUpon>OperationMaintain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SystemFunction\Operation\OperationService.asmx.cs">
+      <DependentUpon>OperationService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SystemFunction\Product\GetBaseProductList.ashx.cs">
+      <DependentUpon>GetBaseProductList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="SystemFunction\Product\ProductImport.aspx.cs">
+      <DependentUpon>ProductImport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SystemFunction\Product\ProductImport.aspx.designer.cs">
+      <DependentUpon>ProductImport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SystemFunction\Product\ProductInquiry.aspx.cs">
+      <DependentUpon>ProductInquiry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SystemFunction\Product\ProductInquiry.aspx.designer.cs">
+      <DependentUpon>ProductInquiry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SystemFunction\Product\ProductMaintain.aspx.cs">
+      <DependentUpon>ProductMaintain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SystemFunction\Product\ProductMaintain.aspx.designer.cs">
+      <DependentUpon>ProductMaintain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SystemFunction\Product\ProductService.asmx.cs">
+      <DependentUpon>ProductService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SystemFunction\System1\GetBaseSystemList.ashx.cs">
+      <DependentUpon>GetBaseSystemList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="SystemFunction\System1\SystemImport.aspx.cs">
+      <DependentUpon>SystemImport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SystemFunction\System1\SystemImport.aspx.designer.cs">
+      <DependentUpon>SystemImport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SystemFunction\System1\SystemInquiry.aspx.cs">
+      <DependentUpon>SystemInquiry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SystemFunction\System1\SystemInquiry.aspx.designer.cs">
+      <DependentUpon>SystemInquiry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SystemFunction\System1\SystemMaintain.aspx.cs">
+      <DependentUpon>SystemMaintain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SystemFunction\System1\SystemMaintain.aspx.designer.cs">
+      <DependentUpon>SystemMaintain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SystemFunction\System1\SystemService.asmx.cs">
+      <DependentUpon>SystemService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SystemMaintenance\SystemGroup\GetSystemGroupList.ashx.cs">
+      <DependentUpon>GetSystemGroupList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="SystemMaintenance\SystemGroup\SystemGroupInquiry.aspx.cs">
+      <DependentUpon>SystemGroupInquiry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SystemMaintenance\SystemGroup\SystemGroupInquiry.aspx.designer.cs">
+      <DependentUpon>SystemGroupInquiry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SystemMaintenance\SystemGroup\SystemGroupMaintain.aspx.cs">
+      <DependentUpon>SystemGroupMaintain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SystemMaintenance\SystemGroup\SystemGroupMaintain.aspx.designer.cs">
+      <DependentUpon>SystemGroupMaintain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SystemMaintenance\SystemGroup\SystemGroupService.asmx.cs">
+      <DependentUpon>SystemGroupService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SystemMaintenance\SystemMaintenance\GetSystemMaintenanceList.ashx.cs">
+      <DependentUpon>GetSystemMaintenanceList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="SystemMaintenance\SystemMaintenance\SystemMaintenanceInquiry.aspx.cs">
+      <DependentUpon>SystemMaintenanceInquiry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SystemMaintenance\SystemMaintenance\SystemMaintenanceInquiry.aspx.designer.cs">
+      <DependentUpon>SystemMaintenanceInquiry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SystemMaintenance\SystemMaintenance\SystemMaintenanceService.asmx.cs">
+      <DependentUpon>SystemMaintenanceService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SystemMaintenance\SystemMaintenance\SystemMaintenanceMaintain.aspx.cs">
+      <DependentUpon>SystemMaintenanceMaintain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SystemMaintenance\SystemMaintenance\SystemMaintenanceMaintain.aspx.designer.cs">
+      <DependentUpon>SystemMaintenanceMaintain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Other\Test\JqueryTestHandler.ashx.cs">
+      <DependentUpon>JqueryTestHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Other\Test\JqueryTest.aspx.cs">
+      <DependentUpon>JqueryTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Other\Test\JqueryTest.aspx.designer.cs">
+      <DependentUpon>JqueryTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Other\Test\JqueryTestService.asmx.cs">
+      <DependentUpon>JqueryTestService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\CommonResource\CommonResource\ITS.WebFramework.CommonResource.csproj">
+      <Project>{33185f46-4eac-42c3-a72c-8ef9099f27c9}</Project>
+      <Name>ITS.WebFramework.CommonResource</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Framework\BootStrapper\ITS.WebFramework.Web.BootStrapper.csproj">
+      <Project>{c3b819ab-8f34-4ef1-ab7c-d2f53777a8c6}</Project>
+      <Name>ITS.WebFramework.Web.BootStrapper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Framework\Common\ITS.WebFramework.Common.csproj">
+      <Project>{af925bfe-37fc-4419-a825-37bc5641e43a}</Project>
+      <Name>ITS.WebFramework.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Framework\Configuration\ITS.WebFramework.Configuration.csproj">
+      <Project>{d5f7e3ff-6449-4a26-b16f-89bb64090e5e}</Project>
+      <Name>ITS.WebFramework.Configuration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Framework\Web\ITS.WebFramework.Web.csproj">
+      <Project>{0bbf26a9-28da-4dfb-b974-8339590002fd}</Project>
+      <Name>ITS.WebFramework.Web</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Message\Message\ITS.WebFramework.Message.csproj">
+      <Project>{1dff6a0d-daca-45b2-bfd7-7852939445a4}</Project>
+      <Name>ITS.WebFramework.Message</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\PermissionComponent\ServiceProxy\ITS.WebFramework.PermissionComponent.ServiceProxy.csproj">
+      <Project>{3597c703-8514-4499-881f-f790676aa1e7}</Project>
+      <Name>ITS.WebFramework.PermissionComponent.ServiceProxy</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SSO\Session\ITS.WebFramework.SSO.Session.csproj">
+      <Project>{166d4638-4acb-4195-90fb-ff4022c4e304}</Project>
+      <Name>ITS.WebFramework.SSO.Session</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SSO\SSOModule\ITS.WebFramework.SSO.SSOModule.csproj">
+      <Project>{b891d451-1dd4-43da-b336-1ace822aaaa2}</Project>
+      <Name>ITS.WebFramework.SSO.SSOModule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Business\ITS.WebFramework.PermissionManagement.Business.csproj">
+      <Project>{D99FCCFF-2D2D-4757-AC40-A157586D9B2F}</Project>
+      <Name>ITS.WebFramework.PermissionManagement.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\ITS.WebFramework.PermissionManagement.Common.csproj">
+      <Project>{03732EF3-4D80-4312-88E6-D5275E7BF176}</Project>
+      <Name>ITS.WebFramework.PermissionManagement.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO\ITS.WebFramework.PermissionManagement.DTO.csproj">
+      <Project>{33846AB0-BD36-451F-AE65-140DB3AC3662}</Project>
+      <Name>ITS.WebFramework.PermissionManagement.DTO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SystemMaintenance\SystemGroup\GetSystemGroupList.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Configuration\ITS.Data.config" />
+    <Content Include="Configuration\log4net.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SystemFunction\Function\GetSystemFunctionList.ashx" />
+    <Content Include="OrgUser\Department\GetSubDepartment.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="OrgUser\Org\GetBaseOrgList.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Role\Role\GetBaseRoleList.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SensitiveData\DataSource\GetBaseDataSourceList.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SensitiveData\DataTable\GetBaseDataTableList.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SensitiveData\DataTableColumn\GetBaseDataTableColumnList.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="OrgUser\User\GetBaseUserList.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="PermissionModel\PermissionMode\GetBasePermissionModeList.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="PermissionModel\Permission\GetBasePermissionList.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SystemFunction\Product\GetBaseProductList.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SystemFunction\Domain\GetBaseDomainList.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SystemFunction\System1\GetBaseSystemList.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="OrgUser\Department\GetDepartmentList.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="OrgUser\Department\GetDepartmentUserList.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Role\RoleDepartment\GetRoleDepartmentList.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Role\RoleUser\GetRoleUserList.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="OrgUser\Department\GetDepartmentTreeList.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="StaticDataPermission\Data\GetBaseDataList.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="StaticDataPermission\DataPermission\GetBaseDataPermissionList.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="StaticDataPermission\Data\GetBaseDataSelectedColumnList.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="StaticDataPermission\DataPermission\GetOptionsOriginalData.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Other\Test\JqueryTestHandler.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="StaticDataPermission\Data\GetBaseDataRuleItemList.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="OrgUser\User\UserRole\GetUserRoleList.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="PermissionModel\PermissionDetail\FunctionPermission\GetFunctionPermissionList.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="PermissionModel\PermissionDetail\SensitiveColumnPermission\GetSensitiveColumnPermissionList.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="OrgUser\Department\DepartmentRole\GetDepartmentRoleList.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MultiLanguage\MultiLanguage\GetMultiLanguageList.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Portal\PortalLink\GetPortalLinkList.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Portal\PortalNews\GetPortalNewsList.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SystemFunction\Function\GetSystemIconList.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Portal\PortalHomePage\GetPortalHomePageNewsList.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SystemMaintenance\SystemMaintenance\GetSystemMaintenanceList.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SSO\SSOPortal\GetSSOPortalList.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Portal\FrameworkLog\GetFrameworkLogList.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SSO\SSOSession\GetSSOSessionList.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\JobSetting\GetBaseConfigJobList.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\GlobalResource\GetBaseConfigGlobalResourceList.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MultiLanguage\MessageCategory\GetBaseMessageCategoryList.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MultiLanguage\MessageContent\GetBaseMessageContentList.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MultiLanguage\MessageType\GetBaseMessageTypeList.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\GlobalSetting\GetBaseConfigGlobalList.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\SystemSetting\GetBaseConfigSystemList.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="PermissionModel\UserProductPermissionInquiry\GetUserProductPermissionList.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CommonPage\GetXmlImportList.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MultiLanguage\PageMultiLanguage\GetPageMultiLanguageList.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MultiLanguage\PageMultiLanguage\GetControlLanguageList.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MultiLanguage\PageMultiLanguageGlobal\GetPageMultiLanguageGlobalList.ashx" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>2199</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/PermissionManagement</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
