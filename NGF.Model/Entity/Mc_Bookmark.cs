@@ -1,5 +1,5 @@
 ﻿//------------------------------------------------------------------------------
-// File Name   : Mc_Bookmark.cs
+// File Name   : Ngf_Bookmark.cs
 // Creator     : Moses.Zhu
 // Create Date : 2017-03-31
 // Description : 此代码由工具生成，请不要人为更改代码，如果重新生成代码后，这些更改将会丢失。
@@ -20,9 +20,9 @@ namespace NGF.Model.Entity
     /// 实体类Mc_Bookmark
     /// </summary>
     [Serializable]
-    public class Mc_Bookmark : ITS.Data.EntityBase
+    public class Ngf_Bookmark : ITS.Data.EntityBase
     {
-        public Mc_Bookmark() : base("mc_bookmark") { }
+        public Ngf_Bookmark() : base("ngf_bookmark") { }
 
         #region Model
         private Guid _User_Id;
@@ -176,31 +176,31 @@ namespace NGF.Model.Entity
             /// <summary>
             /// * 
             /// </summary>
-            public readonly static Field All = new Field("*", "mc_bookmark");
+            public readonly static Field All = new Field("*", "ngf_bookmark");
             /// <summary>
             /// 
             /// </summary>
-            public readonly static Field User_Id = new Field("user_id", "mc_bookmark", DbType.Guid, 16, "user_id");
+            public readonly static Field User_Id = new Field("user_id", "ngf_bookmark", DbType.Guid, 16, "user_id");
             /// <summary>
             /// 
             /// </summary>
-            public readonly static Field Function_Id = new Field("function_id", "mc_bookmark", DbType.Guid, 16, "function_id");
+            public readonly static Field Function_Id = new Field("function_id", "ngf_bookmark", DbType.Guid, 16, "function_id");
             /// <summary>
             /// 
             /// </summary>
-            public readonly static Field Created_At = new Field("created_at", "mc_bookmark", DbType.DateTime, 8, "created_at");
+            public readonly static Field Created_At = new Field("created_at", "ngf_bookmark", DbType.DateTime, 8, "created_at");
             /// <summary>
             /// 
             /// </summary>
-            public readonly static Field Created_By = new Field("created_by", "mc_bookmark", DbType.String, 100, "created_by");
+            public readonly static Field Created_By = new Field("created_by", "ngf_bookmark", DbType.String, 100, "created_by");
             /// <summary>
             /// 
             /// </summary>
-            public readonly static Field Modified_At = new Field("modified_at", "mc_bookmark", DbType.DateTime, 8, "modified_at");
+            public readonly static Field Modified_At = new Field("modified_at", "ngf_bookmark", DbType.DateTime, 8, "modified_at");
             /// <summary>
             /// 
             /// </summary>
-            public readonly static Field Modified_By = new Field("modified_by", "mc_bookmark", DbType.String, 100, "modified_by");
+            public readonly static Field Modified_By = new Field("modified_by", "ngf_bookmark", DbType.String, 100, "modified_by");
         }
         #endregion
 

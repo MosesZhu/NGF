@@ -112,7 +112,7 @@ namespace NGF.Base.SSO
             }
         }
 
-        public Mc_User User { get; set; }
+        //public Mc_User User { get; set; }
 
         public UserDTO UserInfo
         {

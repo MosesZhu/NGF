@@ -40,42 +40,42 @@ namespace NGF.Base.Utility
                 return mTokenOverdueMiniute;
             }
         }
-        public static bool ValidToken(string token)
-        {
-            try 
-            {
-                TokenDTO tokenInfo = GetTokenInfo(token);
-                Mc_Token tokenEntity = DBUtility.NGFDb.From<Mc_Token>().Where(Mc_Token._.Secret_Key == tokenInfo.SecretKey).Select(Mc_Token._.All).ToList().FirstOrDefault();
-                if(tokenEntity == null)
-                {
-                    return false;
-                }
+        //public static bool ValidToken(string token)
+        //{
+        //    try 
+        //    {
+        //        TokenDTO tokenInfo = GetTokenInfo(token);
+        //        Mc_Token tokenEntity = DBUtility.NGFDb.From<Mc_Token>().Where(Mc_Token._.Secret_Key == tokenInfo.SecretKey).Select(Mc_Token._.All).ToList().FirstOrDefault();
+        //        if(tokenEntity == null)
+        //        {
+        //            return false;
+        //        }
 
-                Mc_User userEntity = DBUtility.NGFDb.From<Mc_User>().Where(Mc_User._.Id == tokenEntity.User_Id).FirstDefault();
-                if(userEntity == null)
-                {
-                    return false;
-                }
+        //        Mc_User userEntity = DBUtility.NGFDb.From<Mc_User>().Where(Mc_User._.Id == tokenEntity.User_Id).FirstDefault();
+        //        if(userEntity == null)
+        //        {
+        //            return false;
+        //        }
 
-                if(!tokenInfo.LoginName.Equals(userEntity.Login_Name, StringComparison.CurrentCultureIgnoreCase))
-                {
-                    return false;
-                }
+        //        if(!tokenInfo.LoginName.Equals(userEntity.Login_Name, StringComparison.CurrentCultureIgnoreCase))
+        //        {
+        //            return false;
+        //        }
 
-                TimeSpan span = DateTime.Now - tokenInfo.LoginTime;
-                if (span.TotalMinutes > TokenOverdueMiniute)
-                {
-                    return false;
-                }
+        //        TimeSpan span = DateTime.Now - tokenInfo.LoginTime;
+        //        if (span.TotalMinutes > TokenOverdueMiniute)
+        //        {
+        //            return false;
+        //        }
 
-            } 
-            catch(Exception ex)
-            {
-                return false;
-            }
+        //    } 
+        //    catch(Exception ex)
+        //    {
+        //        return false;
+        //    }
 
-            return true;
-        }
+        //    return true;
+        //}
 
         public static bool ValidWfkToken()
         {

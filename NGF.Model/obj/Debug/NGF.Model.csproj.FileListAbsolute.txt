@@ -7,4 +7,3 @@ F:\NGF\NGF.Model\bin\Debug\Oracle.DataAccess.dll
 F:\NGF\NGF.Model\bin\Debug\ITS.Common.AssemblyInfoExtestion.dll
 F:\NGF\NGF.Model\obj\Debug\NGF.Model.dll
 F:\NGF\NGF.Model\obj\Debug\NGF.Model.pdb
-F:\NGF\NGF.Model\obj\Debug\NGF.Model.csprojResolveAssemblyReference.cache

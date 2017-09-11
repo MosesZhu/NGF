@@ -1,5 +1,5 @@
 ﻿//------------------------------------------------------------------------------
-// File Name   : Mc_User_Image.cs
+// File Name   : Ngf_User_Image.cs
 // Creator     : Moses.Zhu
 // Create Date : 2017-05-05
 // Description : 此代码由工具生成，请不要人为更改代码，如果重新生成代码后，这些更改将会丢失。
@@ -17,12 +17,12 @@ namespace NGF.Model.Entity
 {
 
     /// <summary>
-    /// 实体类Mc_User_Image
+    /// 实体类Ngf_User_Image
     /// </summary>
     [Serializable]
-    public class Mc_User_Image : ITS.Data.EntityBase
+    public class Ngf_User_Image : ITS.Data.EntityBase
     {
-        public Mc_User_Image() : base("mc_user_image") { }
+        public Ngf_User_Image() : base("ngf_user_image") { }
 
         #region Model
         private string _User_Id;
@@ -107,15 +107,15 @@ namespace NGF.Model.Entity
             /// <summary>
             /// * 
             /// </summary>
-            public readonly static Field All = new Field("*", "mc_user_image");
+            public readonly static Field All = new Field("*", "ngf_user_image");
             /// <summary>
             /// 
             /// </summary>
-            public readonly static Field User_Id = new Field("user_id", "mc_user_image", DbType.String, 200, "user_id");
+            public readonly static Field User_Id = new Field("user_id", "ngf_user_image", DbType.String, 200, "user_id");
             /// <summary>
             /// 
             /// </summary>
-            public readonly static Field Image = new Field("image", "mc_user_image", DbType.String, -1, "image");
+            public readonly static Field Image = new Field("image", "ngf_user_image", DbType.String, -1, "image");
         }
         #endregion
 

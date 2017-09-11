@@ -9,7 +9,7 @@ namespace NGF.Model.DTO
     {
         public List<ProductDTO> ProductList { get; set; }
         public List<FunctionDTO> BookmarkList { get; set; }
-        public List<Mc_Language> LanguageList { get; set; }
+        public List<Ngf_Language> LanguageList { get; set; }
 
         public string WfkResourceUrl { get; set; }
 
@@ -17,7 +17,7 @@ namespace NGF.Model.DTO
         public MenuDTO()
         {
             ProductList = new List<ProductDTO>();
-            LanguageList = new List<Mc_Language>();
+            LanguageList = new List<Ngf_Language>();
             BookmarkList = new List<FunctionDTO>();
         }
     }

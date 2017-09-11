@@ -1,5 +1,5 @@
 ﻿//------------------------------------------------------------------------------
-// File Name   : Mc_Preference.cs
+// File Name   : Ngf_Preference.cs
 // Creator     : Moses.Zhu
 // Create Date : 2017-03-31
 // Description : 此代码由工具生成，请不要人为更改代码，如果重新生成代码后，这些更改将会丢失。
@@ -17,12 +17,12 @@ namespace NGF.Model.Entity
 {
 
     /// <summary>
-    /// 实体类Mc_Preference
+    /// 实体类Ngf_Preference
     /// </summary>
     [Serializable]
-    public class Mc_Preference : ITS.Data.EntityBase
+    public class Ngf_Preference : ITS.Data.EntityBase
     {
-        public Mc_Preference() : base("mc_preference") { }
+        public Ngf_Preference() : base("ngf_preference") { }
 
         #region Model
         private Guid _User_Id;
@@ -192,35 +192,35 @@ namespace NGF.Model.Entity
             /// <summary>
             /// * 
             /// </summary>
-            public readonly static Field All = new Field("*", "mc_preference");
+            public readonly static Field All = new Field("*", "ngf_preference");
             /// <summary>
             /// 
             /// </summary>
-            public readonly static Field User_Id = new Field("user_id", "mc_preference", DbType.Guid, 16, "user_id");
+            public readonly static Field User_Id = new Field("user_id", "ngf_preference", DbType.Guid, 16, "user_id");
             /// <summary>
             /// 
             /// </summary>
-            public readonly static Field Language_Key = new Field("language_key", "mc_preference", DbType.String, 400, "language_key");
+            public readonly static Field Language_Key = new Field("language_key", "ngf_preference", DbType.String, 400, "language_key");
             /// <summary>
             /// 
             /// </summary>
-            public readonly static Field Skin = new Field("skin", "mc_preference", DbType.String, 400, "skin");
+            public readonly static Field Skin = new Field("skin", "ngf_preference", DbType.String, 400, "skin");
             /// <summary>
             /// 
             /// </summary>
-            public readonly static Field Created_At = new Field("created_at", "mc_preference", DbType.DateTime, 8, "created_at");
+            public readonly static Field Created_At = new Field("created_at", "ngf_preference", DbType.DateTime, 8, "created_at");
             /// <summary>
             /// 
             /// </summary>
-            public readonly static Field Created_By = new Field("created_by", "mc_preference", DbType.String, 100, "created_by");
+            public readonly static Field Created_By = new Field("created_by", "ngf_preference", DbType.String, 100, "created_by");
             /// <summary>
             /// 
             /// </summary>
-            public readonly static Field Modified_At = new Field("modified_at", "mc_preference", DbType.DateTime, 8, "modified_at");
+            public readonly static Field Modified_At = new Field("modified_at", "ngf_preference", DbType.DateTime, 8, "modified_at");
             /// <summary>
             /// 
             /// </summary>
-            public readonly static Field Modified_By = new Field("modified_by", "mc_preference", DbType.String, 100, "modified_by");
+            public readonly static Field Modified_By = new Field("modified_by", "ngf_preference", DbType.String, 100, "modified_by");
         }
         #endregion
 

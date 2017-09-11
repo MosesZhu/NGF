@@ -9,4 +9,3 @@ F:\NGF\NGF.Tools\obj\Debug\NGF.Tools.Properties.Resources.resources
 F:\NGF\NGF.Tools\obj\Debug\NGF.Tools.csproj.GenerateResource.Cache
 F:\NGF\NGF.Tools\obj\Debug\NGF.Tools.exe
 F:\NGF\NGF.Tools\obj\Debug\NGF.Tools.pdb
-F:\NGF\NGF.Tools\obj\Debug\NGF.Tools.csprojResolveAssemblyReference.cache

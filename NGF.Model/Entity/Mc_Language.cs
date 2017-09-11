@@ -1,5 +1,5 @@
 ﻿//------------------------------------------------------------------------------
-// File Name   : Mc_Language.cs
+// File Name   : Ngf_Language.cs
 // Creator     : Moses.Zhu
 // Create Date : 2017-03-31
 // Description : 此代码由工具生成，请不要人为更改代码，如果重新生成代码后，这些更改将会丢失。
@@ -17,12 +17,12 @@ namespace NGF.Model.Entity
 {
 
     /// <summary>
-    /// 实体类Mc_Language
+    /// 实体类Ngf_Language
     /// </summary>
     [Serializable]
-    public class Mc_Language : ITS.Data.EntityBase
+    public class Ngf_Language : ITS.Data.EntityBase
     {
-        public Mc_Language() : base("mc_language") { }
+        public Ngf_Language() : base("ngf_language") { }
 
         #region Model
         private string _Language_Key;
@@ -209,39 +209,39 @@ namespace NGF.Model.Entity
             /// <summary>
             /// * 
             /// </summary>
-            public readonly static Field All = new Field("*", "mc_language");
+            public readonly static Field All = new Field("*", "ngf_language");
             /// <summary>
             /// 
             /// </summary>
-            public readonly static Field Language_Key = new Field("language_key", "mc_language", DbType.String, 400, "language_key");
+            public readonly static Field Language_Key = new Field("language_key", "ngf_language", DbType.String, 400, "language_key");
             /// <summary>
             /// 
             /// </summary>
-            public readonly static Field Zh_Cn = new Field("zh_cn", "mc_language", DbType.String, -1, "zh_cn");
+            public readonly static Field Zh_Cn = new Field("zh_cn", "ngf_language", DbType.String, -1, "zh_cn");
             /// <summary>
             /// 
             /// </summary>
-            public readonly static Field Zh_Tw = new Field("zh_tw", "mc_language", DbType.String, -1, "zh_tw");
+            public readonly static Field Zh_Tw = new Field("zh_tw", "ngf_language", DbType.String, -1, "zh_tw");
             /// <summary>
             /// 
             /// </summary>
-            public readonly static Field En_Us = new Field("en_us", "mc_language", DbType.String, -1, "en_us");
+            public readonly static Field En_Us = new Field("en_us", "ngf_language", DbType.String, -1, "en_us");
             /// <summary>
             /// 
             /// </summary>
-            public readonly static Field Createed_At = new Field("createed_at", "mc_language", DbType.DateTime, 8, "createed_at");
+            public readonly static Field Createed_At = new Field("createed_at", "ngf_language", DbType.DateTime, 8, "createed_at");
             /// <summary>
             /// 
             /// </summary>
-            public readonly static Field Created_By = new Field("created_by", "mc_language", DbType.String, 100, "created_by");
+            public readonly static Field Created_By = new Field("created_by", "ngf_language", DbType.String, 100, "created_by");
             /// <summary>
             /// 
             /// </summary>
-            public readonly static Field Modified_At = new Field("modified_at", "mc_language", DbType.DateTime, 8, "modified_at");
+            public readonly static Field Modified_At = new Field("modified_at", "ngf_language", DbType.DateTime, 8, "modified_at");
             /// <summary>
             /// 
             /// </summary>
-            public readonly static Field Modified_By = new Field("modified_by", "mc_language", DbType.String, 100, "modified_by");
+            public readonly static Field Modified_By = new Field("modified_by", "ngf_language", DbType.String, 100, "modified_by");
         }
         #endregion
 

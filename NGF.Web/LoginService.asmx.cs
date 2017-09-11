@@ -231,10 +231,10 @@ namespace NGF.Web
         /// <param name="user"></param>
         /// <param name="password"></param>
         /// <returns></returns>
-        private bool CheckUserAuthencationInfo(Mc_User user, string password)
-        {
-            return true;
-        }
+        //private bool CheckUserAuthencationInfo(Mc_User user, string password)
+        //{
+        //    return true;
+        //}
 
         /// <summary>
         /// 添加或更新Token
@@ -242,38 +242,38 @@ namespace NGF.Web
         /// <param name="result"></param>
         /// <param name="user"></param>
         /// <returns></returns>
-        private string RenewToken(ResultDTO result, Mc_User user, Guid ProductId, Guid OrgId)
-        {
-            string secretKey = Guid.NewGuid().ToString();
-            Mc_Token tokenInfo = NGFDb.From<Mc_Token>()
-                .Where(Mc_Token._.User_Id == user.Id)
-                .ToList()
-                .FirstOrDefault();
-            if (tokenInfo == null)
-            {
-                tokenInfo = new Mc_Token();
-                tokenInfo.User_Id = user.Id;
-                tokenInfo.Login_Time = DateTime.Now;
-                tokenInfo.Secret_Key = secretKey;
-                NGFDb.Insert<Mc_Token>(tokenInfo);
-            }
-            else
-            {
-                tokenInfo.Login_Time = DateTime.Now;
-                tokenInfo.Secret_Key = secretKey;
-                NGFDb.Update<Mc_Token>(tokenInfo);
-            }
-            result.success = true;
-            TokenDTO token = new TokenDTO()
-            {
-                LoginName = user.Login_Name,
-                LoginTime = tokenInfo.Login_Time,
-                SecretKey = Guid.Parse(secretKey),
-                ProductId = ProductId,
-                OrgId = OrgId
-            };
-            return TokenUtility.GenerateToken(token);
-        }
+        //private string RenewToken(ResultDTO result, Mc_User user, Guid ProductId, Guid OrgId)
+        //{
+        //    string secretKey = Guid.NewGuid().ToString();
+        //    Mc_Token tokenInfo = NGFDb.From<Mc_Token>()
+        //        .Where(Mc_Token._.User_Id == user.Id)
+        //        .ToList()
+        //        .FirstOrDefault();
+        //    if (tokenInfo == null)
+        //    {
+        //        tokenInfo = new Mc_Token();
+        //        tokenInfo.User_Id = user.Id;
+        //        tokenInfo.Login_Time = DateTime.Now;
+        //        tokenInfo.Secret_Key = secretKey;
+        //        NGFDb.Insert<Mc_Token>(tokenInfo);
+        //    }
+        //    else
+        //    {
+        //        tokenInfo.Login_Time = DateTime.Now;
+        //        tokenInfo.Secret_Key = secretKey;
+        //        NGFDb.Update<Mc_Token>(tokenInfo);
+        //    }
+        //    result.success = true;
+        //    TokenDTO token = new TokenDTO()
+        //    {
+        //        LoginName = user.Login_Name,
+        //        LoginTime = tokenInfo.Login_Time,
+        //        SecretKey = Guid.Parse(secretKey),
+        //        ProductId = ProductId,
+        //        OrgId = OrgId
+        //    };
+        //    return TokenUtility.GenerateToken(token);
+        //}
 
 
     }
