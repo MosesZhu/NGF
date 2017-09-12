@@ -243,6 +243,7 @@
     <Content Include="Content\alertify.css" />
     <Content Include="Content\alertifyjs.css" />
     <Content Include="Content\bootstrap-combined.min.css" />
+    <Content Include="IsAlive.aspx" />
     <Content Include="Scripts\bootstrap-table-en-US.js" />
     <Content Include="Scripts\bootstrap-table-zh-CN.js" />
     <Content Include="Scripts\bootstrap-table-zh-TW.js" />

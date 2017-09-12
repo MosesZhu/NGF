@@ -56,7 +56,7 @@
     </Reference>
     <Reference Include="Oracle.DataAccess, Version=2.112.3.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=AMD64">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Users\Moses.Zhu\Desktop\Oracle.DataAccess.dll</HintPath>
+      <HintPath>\\10.85.10.2\bach30\Common\bin\Oracle.DataAccess.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -79,6 +79,7 @@
   <ItemGroup>
     <Content Include="Configuration\ITS.Data.config" />
     <Content Include="Configuration\log4net.config" />
+    <Content Include="Buttons.aspx" />
     <Content Include="Controls.aspx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -95,6 +96,13 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Buttons.aspx.cs">
+      <DependentUpon>Buttons.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Buttons.aspx.designer.cs">
+      <DependentUpon>Buttons.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ItemBusiness.cs" />
     <Compile Include="Controls.aspx.cs">
       <DependentUpon>Controls.aspx</DependentUpon>

@@ -43,3 +43,4 @@ F:\NGF\WSC_Frame\obj\Debug\WSC.Res.AspPagerRes_TC.resources
 F:\NGF\WSC_Frame\obj\Debug\WSC_Frame.csproj.GenerateResource.Cache
 F:\NGF\WSC_Frame\obj\Debug\WSC_Frame.dll
 F:\NGF\WSC_Frame\obj\Debug\WSC_Frame.pdb
+F:\NGF\WSC_Frame\obj\Debug\WSC_Frame.csprojResolveAssemblyReference.cache

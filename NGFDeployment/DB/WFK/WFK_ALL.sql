@@ -1,5 +1,3 @@
-USE [WFK]
-GO
 /****** Object:  UserDefinedFunction [dbo].[GetCharNumber]    Script Date: 2017-9-8 9:21:17 ******/
 SET ANSI_NULLS ON
 GO
@@ -5091,12 +5089,7 @@ GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'登录时间。' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'sso_session', @level2type=N'COLUMN',@level2name=N'logon_time'
 GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'最后访问时间。' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'sso_session', @level2type=N'COLUMN',@level2name=N'last_access_time'
-GO
-USE [master]
-GO
-ALTER DATABASE [WFK] SET  READ_WRITE 
-GO
-USE [WFK]
+
 GO
 INSERT [dbo].[base_org] ([id], [name], [description], [site], [org_admin_role_id], [allow_edit], [allow_delete], [sort_code], [active], [created_user_id], [created_by], [created_date], [modified_user_id], [modified_by], [modified_date]) VALUES (N'ed9ac3f5-4d01-49d0-8c55-843e7e65110e', N'Global', N'Global', N'QTY', N'9a3bbe8e-a279-458d-b07b-1b0432ed08ff', 0, 0, 1, 1, N'5f6003a9-8331-4eeb-bc35-92a2bb6d90ed', N'Tyler.Liu', CAST(N'2013-05-21T15:48:44.923' AS DateTime), N'e86c9df8-97ae-4e30-bc7a-73005af7fd1d', N'ITO.Vigo.Zhang', CAST(N'2013-11-06T15:35:20.313' AS DateTime))
 

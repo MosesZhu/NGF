@@ -312,6 +312,13 @@ var _Context = {
             .attr("lang", "lang_print").html("<span class='glyphicon glyphicon-print'></span>&nbsp;Print");
         $(".ngf-btn-config").removeClass("btn btn-skin-primary btn-default").addClass("btn btn-skin-primary ngf-btn-90")
             .attr("lang", "lang_config").html("<span class='glyphicon glyphicon-cog'></span>&nbsp;Config");
+
+        $(".ngf-btn-copy").removeClass("btn btn-skin-primary btn-default").addClass("btn btn-skin-primary ngf-btn-90")
+            .attr("lang", "lang_copy").html("<span class='fa fa-fw fa-copy'></span>&nbsp;Copy");
+        $(".ngf-btn-view").removeClass("btn btn-skin-primary btn-default").addClass("btn btn-skin-primary ngf-btn-90")
+            .attr("lang", "lang_view").html("<span class='glyphicon glyphicon-eye-open'></span>&nbsp;View");
+        $(".ngf-btn-withdraw").removeClass("btn btn-skin-primary btn-default").addClass("btn btn-danger ngf-btn-120")
+            .attr("lang", "lang_withdraw").html("<span class='fa fa-fw fa-hand-stop-o'></span>&nbsp;Withdraw");
     }
 };
 var _CurrentLang = window._Lang_ZhCN ? window._Lang_ZhCN : {};
