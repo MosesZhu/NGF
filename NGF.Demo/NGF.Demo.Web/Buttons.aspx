@@ -42,6 +42,7 @@
                 <button class="ngf-btn-view" onclick=""></button>
                 <button class="ngf-btn-copy" onclick=""></button>
                 <button class="ngf-btn-withdraw" onclick=""></button>
+                <button class="ngf-btn-post" onclick=""></button>
             </div>
         </div>
 

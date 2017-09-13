@@ -160,6 +160,7 @@ namespace NGF.Base.Base
             MultiLanguageKeyList.Add("lang_copy");
             MultiLanguageKeyList.Add("lang_view");
             MultiLanguageKeyList.Add("lang_withdraw");
+            MultiLanguageKeyList.Add("lang_post");
             //获得DB中已维护的多语言数据
             List<Ngf_Language> dbLangCollections = GetLanguageData();
 

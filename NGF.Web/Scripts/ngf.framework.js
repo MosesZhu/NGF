@@ -319,6 +319,8 @@ var _Context = {
             .attr("lang", "lang_view").html("<span class='glyphicon glyphicon-eye-open'></span>&nbsp;View");
         $(".ngf-btn-withdraw").removeClass("btn btn-skin-primary btn-default").addClass("btn btn-danger ngf-btn-120")
             .attr("lang", "lang_withdraw").html("<span class='fa fa-fw fa-hand-stop-o'></span>&nbsp;Withdraw");
+        $(".ngf-btn-post").removeClass("btn btn-skin-primary btn-default").addClass("btn btn-skin-primary ngf-btn-90")
+            .attr("lang", "lang_post").html("<span class='fa fa-fw fa-send-o'></span>&nbsp;Withdraw");
     }
 };
 var _CurrentLang = window._Lang_ZhCN ? window._Lang_ZhCN : {};

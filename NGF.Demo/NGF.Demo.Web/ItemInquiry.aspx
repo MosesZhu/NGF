@@ -67,7 +67,7 @@
                 <input type="text" class="ngf-tbx ngf-tbx-required" id="tbxItemNo" value="" />
                 <label for="tbxDescription" lang="lang_description"></label>
                 <input type="text" class="ngf-tbx" id="tbxDescription" value="" />
-                <label for="">Date From</label>
+                <!--<label for="">Date From</label>
                 <input type="text" class="ngf-tbx" id="" value="" />
                 <label for="">Date To</label>
                 <input type="text" class="ngf-tbx" id="" value="" />
@@ -76,7 +76,7 @@
                 <label for="">Time To</label>
                 <input type="text" class="ngf-tbx" id="" value="" />
                 <label for="">Note</label>
-                <input type="text" class="ngf-tbx" id="" value="" />
+                <input type="text" class="ngf-tbx" id="" value="" />-->
             </div>
             <div class="ngf-modal-footer">
                 <button class="ngf-btn-save" onclick="return saveItem()"></button>

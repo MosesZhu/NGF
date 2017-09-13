@@ -102,7 +102,6 @@
                 <div class="col-xs-8">
                     <div class="checkbox icheck">
                         <label>
-
                             <input id="cbxRememberMe" type="checkbox">
                             <label for="cbxRememberMe" lang="lang_remember_me" style="padding-left: 10px;">Remember Me</label>
                         </label>
