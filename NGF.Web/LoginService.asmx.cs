@@ -26,11 +26,19 @@ namespace NGF.Web
         [WebMethod]
         public ResultDTO getDomainList()
         {
-            ResultDTO result = new ResultDTO()
+
+            ResultDTO result = new ResultDTO() { success = true };
+            try
             {
-                success = true,
-                data = QADHelper.GetAllDomainList()
-            };
+                result.data = QADHelper.GetAllDomainList();
+            }
+            catch (Exception ex)
+            {
+                List<string> tempDomainList = new List<string>();
+                tempDomainList.Add("BENQ");
+                tempDomainList.Add("QGROUP");
+                result.data = tempDomainList;
+            }
             return result;
         }
 

@@ -38,7 +38,8 @@ $('#rowDomain').hide();", true);
                     }
                 }
 
-                if (NGFConfig.NGFNtAuth)
+                if (NGFConfig.NGFNtAuth && 
+                    !(Request.QueryString.Get("action") != null && Request.QueryString.Get("action").Equals("logout", StringComparison.CurrentCultureIgnoreCase)))
                 {
                     NtLogin();
                     //Page.ClientScript.RegisterStartupScript(GetType(), "Test", @"alert('" + name + "')", true);

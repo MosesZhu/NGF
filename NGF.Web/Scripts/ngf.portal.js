@@ -1376,7 +1376,7 @@
 					"success": function (d) {
 						if (d.success) {
 							$.cookie("SSOToken", null);
-							$.goto("Login");
+							$.goto("Login?action=logout");
 						}
 					}
 				};
