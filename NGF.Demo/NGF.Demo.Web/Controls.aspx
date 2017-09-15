@@ -18,10 +18,21 @@
         <div class="ngf-input-area">
             <div class="ngf-inputbar">
                 <div class="ngf-form-row-2">
-                    <label for="tbxDemo1" lang="lang_item_no"></label>
-                    <input type="text" id="tbxDemo1" />
-                    <label for="ddlLanguage" lang="lang_language"></label>
+                    <label for="tbxDemo1">Text Box</label>
+                    <input type="text" id="tbxDemo1" value="Some Text"/>
+                    <label for="ddlLanguage">Drop Down List</label>
                     <select class="ngf-select" id="ddlLanguage">
+                        <option selected="selected" value="EnUS">English</option>
+                        <option value="ZhCN">中文简体</option>
+                        <option value="ZhTW">中文繁體</option>
+                    </select>                    
+                </div>
+
+                <div class="ngf-form-row-2">
+                    <label for="tbxDemo2">Text Box (Disable)</label>
+                    <input type="text" id="tbxDemo2" disabled="disabled" value="Some Text"/>
+                    <label for="ddlLanguage2">Drop Down List (Disable)</label>
+                    <select class="ngf-select" id="ddlLanguage2" disabled="disabled">
                         <option selected="selected" value="EnUS">English</option>
                         <option value="ZhCN">中文简体</option>
                         <option value="ZhTW">中文繁體</option>

@@ -36,14 +36,7 @@ $('#ddlOrg').parents('tr').hide();", true);
                         Page.ClientScript.RegisterStartupScript(GetType(), "SwitchToWSCMode", @"_Context.AuthMode = 'WSC';$('#areaNT').hide();
 $('#rowDomain').hide();", true);
                     }
-                }
-
-                if (NGFConfig.NGFNtAuth && 
-                    !(Request.QueryString.Get("action") != null && Request.QueryString.Get("action").Equals("logout", StringComparison.CurrentCultureIgnoreCase)))
-                {
-                    NtLogin();
-                    //Page.ClientScript.RegisterStartupScript(GetType(), "Test", @"alert('" + name + "')", true);
-                }
+                }                
 
                 InitializeSSORequest();
 
@@ -101,6 +94,13 @@ $('#ddlDomain').parents('tr').hide();", true);
                 if (NGFConfig.NGFEnvironmentVisible)
                 {
                     this.textEnvironmentInfo.Text = "(" + NGFConfig.NGFEnvironment + ")";
+                }
+
+                if (NGFConfig.NGFNtAuth &&
+                    !(Request.QueryString.Get("action") != null && Request.QueryString.Get("action").Equals("logout", StringComparison.CurrentCultureIgnoreCase)))
+                {
+                    NtLogin();
+                    //Page.ClientScript.RegisterStartupScript(GetType(), "Test", @"alert('" + name + "')", true);
                 }
             }
         }
